@@ -1,6 +1,5 @@
 <?php
    include "db_connect.php";
-    include "db_confg.php";
    
    	class User{
    
@@ -12,19 +11,12 @@
    			
    		}
    
- 
+   		
    
    		/*** for login process ***/
    		public function check_login($emailusername, $password){
    
            	$password = md5($password);
-            
-            $sqlemp = "SELECT employee_type from users1 WHERE uemail='$emailusername' or uname='$emailusername'";
-           
-                $employee_type = mysqli_query($this->db,$sqlemp);
-                $emp = mysqli_fetch_array($employee_type);
-                $type= $emp[0];
-           
    			$sql2="SELECT uid from users1 WHERE uemail='$emailusername' or uname='$emailusername' and upass='$password'";
    
    			//checking if the username is available in the table
@@ -36,22 +28,13 @@
    	            // this login var will use for the session thing
    	            $_SESSION['login'] = true;
    	            $_SESSION['uid'] = $user_data['uid'];
-                
-            
-   	            return $type;
-   	            } 
-            
+   	            return true;
+   	        }
    	        else{
    			    return false;
    			}
        	}
    
-        
-        	/*** to identify separate employee type ***/
-     
-        
-        
-        
        	/*** for showing the username or fullname ***/
        	public function get_fullname($uid){
        		$sql3="SELECT fullname FROM users1 WHERE uid = $uid";
