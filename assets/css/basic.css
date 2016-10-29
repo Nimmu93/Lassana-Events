@@ -1,22 +1,31 @@
-
-/*=============================================================
-    Authour URI: www.binarytheme.com
-    License: Commons Attribution 3.0
-
-    http://creativecommons.org/licenses/by/3.0/
-
-    100% To use For Personal And Commercial Use.
-    IN EXCHANGE JUST GIVE US CREDITS AND TELL YOUR FRIENDS ABOUT US
-   
-    ========================================================  */
+/* Basic css other than bootstrap for employees  */
 
 
 /*==============================================
-    BASIC  STYLES    
-    =============================================*/
+LOGIN PAGE    
+=============================================*/
+
+a.login{
+    color:#939598;
+}
+a.login:hover {
+  color:#656668;
+}
+body.login{
+    background-color:#dddede; 
+    color:#939598;
+}
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Questrial', sans-serif;
     line-height:25px;
+    font-family: 'Open Sans',serif;
+}
+
+button.login{
+    background-color:#939598;
+    color:#dddede;
+    padding: 5px 15px;
+    border-radius: 4px;
 }
 
 #wrapper {
