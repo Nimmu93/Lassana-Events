@@ -1,6 +1,6 @@
 <?php
    session_start();
-   include_once 'class.user.php';
+   include_once '../config/class.user.php';
    $user = new User(); 
    $uid = $_SESSION['uid'];
    if (!$user->get_session()){
@@ -22,13 +22,13 @@
     <title>Edit Account</title>
 
     <!-- BOOTSTRAP STYLES-->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLES-->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="../assets/css/font-awesome.css" rel="stylesheet" />
     <!--CUSTOM BASIC STYLES-->
-    <link href="assets/css/basic.css" rel="stylesheet" />
+    <link href="../assets/css/basic.css" rel="stylesheet" />
     <!--CUSTOM MAIN STYLES-->
-    <link href="assets/css/custom.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
     <!-- GOOGLE FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
@@ -123,7 +123,7 @@
                     </li>
                       
                     <li>
-                        <a href='login.php?q=logout'><i class="fa fa-flash "></i>Logout</a>
+                        <a href='../login.php?q=logout'><i class="fa fa-flash "></i>Logout</a>
                     </li>
                 </ul>
             </div>
@@ -224,13 +224,13 @@
     <!-- /. FOOTER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="../assets/js/jquery-1.10.2.js"></script>
     <!-- BOOTSTRAP SCRIPTS -->
-    <script src="assets/js/bootstrap.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
     <!-- METISMENU SCRIPTS -->
-    <script src="assets/js/jquery.metisMenu.js"></script>
+    <script src="../assets/js/jquery.metisMenu.js"></script>
     <!-- CUSTOM SCRIPTS -->
-    <script src="assets/js/custom.js"></script>
+    <script src="../assets/js/custom.js"></script>
 
 
 </body>

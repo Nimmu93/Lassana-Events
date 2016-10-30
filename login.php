@@ -3,7 +3,7 @@
 <!----------------------------------------------------------------------------------------------------------------------->
 <?php
    session_start();
-    include_once 'class.user.php';
+    include_once 'config/class.user.php';
     $user = new User();
     if (isset($_REQUEST['submit'])) {
         extract($_REQUEST);
@@ -45,7 +45,7 @@
             
             <div class="col-md-12">
                 
-                <img src="logo.png" />
+                <img src="assets/img/logo.png" />
                 
             </div>
             

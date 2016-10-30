@@ -1,6 +1,6 @@
 <?php
    session_start();
-   include_once 'class.user.php';
+   include_once '../config/class.user.php';
    $user = new User(); 
    $uid = $_SESSION['uid'];
    if (!$user->get_session()){
@@ -22,13 +22,13 @@
     <title>Edit Items</title>
 
     <!-- BOOTSTRAP STYLES-->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLES-->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="../assets/css/font-awesome.css" rel="stylesheet" />
     <!--CUSTOM BASIC STYLES-->
-    <link href="assets/css/basic.css" rel="stylesheet" />
+    <link href="../assets/css/basic.css" rel="stylesheet" />
     <!--CUSTOM MAIN STYLES-->
-    <link href="assets/css/custom.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
     <!-- GOOGLE FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
@@ -36,7 +36,7 @@
 		<script>
 		
 		$('#cat').click(function(){
-			$('#uploadPreview').attr('src', "assets/img/demoUpload.jpg");
+			$('#uploadPreview').attr('src', "../assets/img/demoUpload.jpg");
 			});
 		
 		</script>

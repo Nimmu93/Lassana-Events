@@ -1,6 +1,6 @@
 <?php
    session_start();
-   include_once 'class.user.php';
+   include_once '../config/class.user.php';
    $user = new User(); 
    $uid = $_SESSION['uid'];
    if (!$user->get_session()){
@@ -61,7 +61,7 @@
                     <li>
                         <?php
 
-                    include 'db_confg.php';
+                    include '../config/db_confg.php';
 
                      $query = $conn->query("select * from users1 where uid='$uid'");
                      while($row = mysqli_fetch_assoc($query)){
@@ -95,7 +95,7 @@
                     </li>
                       
                     <li>
-                        <a href='login.php?q=logout'><i class="fa fa-flash "></i>Logout</a>
+                        <a href='../login.php?q=logout'><i class="fa fa-flash "></i>Logout</a>
                     </li>
                 </ul>
 
@@ -136,7 +136,7 @@
                         </div>
                         <div class="panel-body">
                              <?php
-                        include 'db_confg.php';
+                        include '../config/db_confg.php';
                         
                             $select = "SELECT * FROM orders ";
                             $result = mysqli_query($conn, $select);
@@ -210,13 +210,13 @@
     <!-- /. FOOTER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="../assets/js/jquery-1.10.2.js"></script>
     <!-- BOOTSTRAP SCRIPTS -->
-    <script src="assets/js/bootstrap.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
      <!-- METISMENU SCRIPTS -->
-    <script src="assets/js/jquery.metisMenu.js"></script>
+    <script src="../assets/js/jquery.metisMenu.js"></script>
     <!-- CUSTOM SCRIPTS -->
-    <script src="assets/js/custom.js"></script>
+    <script src="../assets/js/custom.js"></script>
 
 
 </body>
