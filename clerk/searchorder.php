@@ -83,17 +83,13 @@
 
 
                     <li>
-                        <a  href="home.php"><i class="fa fa-dashboard "></i>Dashboard</a>
+                        <a class="active-menu" href="orders.php"><i class="fa fa-dashboard "></i>Orders</a>
                     </li>
                     <li>
                         <a href="reservation.php"><i class="fa fa-desktop "></i>Make Reservation</a>
                          
                     </li>
-                     <li>
-                        <a class="active-menu" href="orders.php"><i class="fa fa-tasks "></i>Orders </a>
-                                                
-                    </li>
-                    
+                     
                     <li>
                         <a href='../login.php?q=logout'><i class="fa fa-flash "></i>Logout</a>
                     </li>

@@ -83,15 +83,11 @@
 
 
                     <li>
-                        <a  href="home.php"><i class="fa fa-dashboard "></i>Dashboard</a>
+                        <a class="active-menu" href="orders.php"><i class="fa fa-dashboard "></i>Orders</a>
                     </li>
                     <li>
                         <a href="stock.php"><i class="fa fa-desktop "></i>Stock</a>
                          
-                    </li>
-                     <li>
-                        <a class="active-menu" href="orders.php"><i class="fa fa-yelp "></i>Orders </a>
-                                                
                     </li>
                       
                     <li>

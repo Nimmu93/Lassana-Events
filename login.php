@@ -1,6 +1,4 @@
-<!----------------------------------------------------------------------------------------------------------------------->
-<!-----------------------------------------------------PHP CODING FOR LOGIN---------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------------------->
+
 <?php
    session_start();
     include_once 'config/class.user.php';
@@ -12,17 +10,15 @@
             /* Registration Success*/
         header("location:admin/orders.php");
         }else if($login == 'stock') {
-            header("location:stock/home.php");
+            header("location:stock/orders.php");
         }else if($login =='clerk'){
-            header("location:clerk/home.php");
+            header("location:clerk/orders.php");
         }else{echo    "<script type='text/javascript' language='javascript'>
                         alert('wrong username or password');</script>";
         }
     }
 ?>
-<!----------------------------------------------------------------------------------------------------------------------->
-<!-----------------------------------------------------END PHP CODING FOR LOGIN------------------------------------------>
-<!----------------------------------------------------------------------------------------------------------------------->
+
 <head>
     <title> Login</title>
     <!-- Basic employee styles in basic css-->
