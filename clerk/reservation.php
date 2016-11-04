@@ -90,7 +90,7 @@
 
 
                     <li>
-                        <a  href="home.php"><i class="fa fa-dashboard "></i>Dashboard</a>
+                        <a href="orders.php"><i class="fa fa-dashboard "></i>Orders</a>
                     </li>
                     <li>
                         <a class="active-menu" href="reservation.php"><i class="fa fa-desktop "></i>Make Reservation</a>
@@ -107,13 +107,7 @@
                                 
                         </ul>
                     </li>
-                     <li>
-                        <a href="orders.php"><i class="fa fa-tasks "></i>Orders </a>
-                                                
-                    </li>
-                    
-                     
-                              
+                      
                     <li>
                         <a href='../login.php?q=logout'><i class="fa fa-flash "></i>Logout</a>
                     </li>

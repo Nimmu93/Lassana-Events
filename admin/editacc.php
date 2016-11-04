@@ -61,7 +61,7 @@
                     <li>
                         <?php
 
-                    include 'db_confg.php';
+                    include '../config/db_confg.php';
 
                      $query = $conn->query("select * from users1 where uid='$uid'");
                      while($row = mysqli_fetch_assoc($query)){

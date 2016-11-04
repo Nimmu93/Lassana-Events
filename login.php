@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿<?php
+
+<?php
+>>>>>>> 18be0fd20ddb93bf5559b71eaf181e0bf8b412e8
    session_start();
     include_once 'class.user.php';
     $user = new User();
@@ -8,6 +12,7 @@
         $login = $user->check_login($emailusername, $password);
         if ($login) {
             /* Registration Success*/
+<<<<<<< HEAD
            header("location:home.php");
         } 
         else {
@@ -17,17 +22,29 @@
    
                     </script>";
             /*header("location:home1.php");*/
+=======
+        header("location:admin/orders.php");
+        }else if($login == 'stock') {
+            header("location:stock/orders.php");
+        }else if($login =='clerk'){
+            header("location:clerk/orders.php");
+        }else{echo    "<script type='text/javascript' language='javascript'>
+                        alert('wrong username or password');</script>";
+>>>>>>> 18be0fd20ddb93bf5559b71eaf181e0bf8b412e8
         }
     }
 
 ?>
 
+<<<<<<< HEAD
 
 
 
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+=======
+>>>>>>> 18be0fd20ddb93bf5559b71eaf181e0bf8b412e8
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
