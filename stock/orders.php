@@ -29,50 +29,40 @@
     <link href="../assets/css/basic.css" rel="stylesheet" />
     <!--CUSTOM MAIN STYLES-->
     <link href="../assets/css/custom.css" rel="stylesheet" />
-    <!-- GOOGLE FONTS-->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    
+    <style>
+        body{
+            font-family: 'Questrial', sans-serif;
+        }
+    </style>
+    
 </head>
+    
+    
 <body>
     <div id="wrapper">
-        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Lassana Party</a>
-            </div>
-
-            <div class="header-right">
-                
-                <h3 style="float:left;color:#b5b9bc"> Stock Keeper</h3>
-
-              <a style="margin-left:50px;margin-top:10px" href="message-task.html" class="btn btn-info" title="New Message"><b>30 </b><i class="fa fa-envelope-o fa-2x"></i></a>
-                
-
-            </div>
+        <nav class="navbar navbar-cls-top " role="navigation" >
+            
+            <img  src="../assets/img/logo.png" style="margin:5px " >
+            
         </nav>
-        <!-- /. NAV TOP  -->
-        <nav class="navbar-default navbar-side" role="navigation">
+        <!-- Left navigation with user details  -->
+        <nav class="navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
                     <li>
                         <?php
-
-                    include '../config/db_confg.php';
-
-                     $query = $conn->query("select * from users1 where uid='$uid'");
-                     while($row = mysqli_fetch_assoc($query)){
-                     
-                    
-                     ?>
+                        include '../config/db_confg.php';
+                        $query = $conn->query("select * from users1 where uid='$uid'");
+                        while($row = mysqli_fetch_assoc($query)){
+                        ?>
+                        
                         <div class="user-img-div">
-                            <img class="photo" src="<?php echo $row['location']; ?>" width="100" height="180">
-                    <?php } ?>
-                    <br>
-                    <br/>
+                            <img class="photo" src="<?php echo $row['location']; ?>" >
+                            <?php } ?>
+                            <br><br>
+                            
                             <div class="inner-text">
                                <?php echo $user->get_fullname($uid); ?>
                                                      

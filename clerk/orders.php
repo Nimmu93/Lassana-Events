@@ -30,49 +30,40 @@
     <!--CUSTOM MAIN STYLES-->
     <link href="../assets/css/custom.css" rel="stylesheet" />
     <!-- GOOGLE FONTS-->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    
+    <style>
+        body{
+            font-family: 'Questrial', sans-serif;
+        }
+    </style>
+    
 </head>
+    
+    
 <body>
     <div id="wrapper">
-        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Lassana Party</a>
-            </div>
-
-            <div class="header-right">
-                
-                <h3 style="float:left;color:#b5b9bc"> Executive</h3>
-
-              <a style="margin-left:50px;margin-top:10px" href="message-task.html" class="btn btn-info" title="New Message"><b>30 </b><i class="fa fa-envelope-o fa-2x"></i></a>
-                
-
-            </div>
+        <nav class="navbar navbar-cls-top " role="navigation" >
+            
+            <img  src="../assets/img/logo.png" style="margin:5px " >
+            
         </nav>
-        <!-- /. NAV TOP  -->
-        <nav class="navbar-default navbar-side" role="navigation">
+        <!-- Left navigation with user details  -->
+        <nav class="navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
                     <li>
                         <?php
-
-                    include '../config/db_confg.php';
-
-                     $query = $conn->query("select * from users1 where uid='$uid'");
-                     while($row = mysqli_fetch_assoc($query)){
-                     
-                    
-                     ?>
+                        include '../config/db_confg.php';
+                        $query = $conn->query("select * from users1 where uid='$uid'");
+                        while($row = mysqli_fetch_assoc($query)){
+                        ?>
+                        
                         <div class="user-img-div">
-                            <img class="photo" src="<?php echo $row['location']; ?>" width="100" height="180">
-                    <?php } ?>
-                    <br>
-                    <br/>
+                            <img class="photo" src="<?php echo $row['location']; ?>" >
+                            <?php } ?>
+                            <br><br>
+                            
                             <div class="inner-text">
                                <?php echo $user->get_fullname($uid); ?>
                                                      
@@ -83,10 +74,10 @@
 
 
                     <li>
-                        <a class="active-menu" href="orders.php"><i class="fa fa-dashboard "></i>Orders</a>
+                        <a id="active-menu" href="orders.php"><i class="fa fa-dashboard "></i>Orders</a>
                     </li>
                     <li>
-                        <a href="reservation.php"><i class="fa fa-desktop "></i>Make Reservation</a>
+                        <a href="reservation.php"><i class="fa fa-desktop "></i>Reservation</a>
                          
                     </li>
                     
@@ -98,21 +89,20 @@
             </div>
 
         </nav>
-        <!-- /. NAV SIDE  -->
+        
+        <!-- Main content -->
         <div id="page-wrapper">
             <div id="page-inner">
                 <div class="row">
 
                     <div class="col-md-12">
                         <h1 class="page-head-line">Orders</h1>
-                        
-
                     </div>
 
                 </div>
                 <!-- /. ROW  -->
                <div class="col-sm-3 col-md-3 pull-right">
-            <form style="margin-top:15px;" method="post" action="searchorder.php">
+            <form  method="post" action="searchorder.php">
                <div class="input-group">
                   <input type="text" class="form-control" placeholder="Search" name="srch" id="srch-term">
                   <div class="input-group-btn">
@@ -123,7 +113,7 @@
          </div>
          <br/>
          <br>
-            <div style="margin-top:15px;" class="row">
+            <div  class="row">
                 <div class="col-md-12">
                   <!--   search orders -->
                     <div class="panel panel-info">
@@ -142,8 +132,8 @@
                                             
                             // print table heads//
                                 
-                                echo ('<div class="table-responsive"><table border=1 class="table table-bordered" >
-                                    <thead style="background-color:#656565;color:#ffffff;">
+                                echo ('<div ><table border=1 class="table table-bordered" >
+                                    <thead >
                                     <tr>
 
                                         <th>Order ID</th>

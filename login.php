@@ -54,12 +54,30 @@
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLES-->
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
+<<<<<<< Updated upstream
     <!-- GOOGLE FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
 </head>
 <body style="background-color: #E2E2E2;">
     <div class="container">
+=======
+    <!-- google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    
+    <style>
+    body{
+        font-family: 'Questrial', sans-serif;
+    }
+    </style>
+</head>
+
+
+<body class="login">
+    
+    <div class="container" >
+        
+>>>>>>> Stashed changes
         <div class="row text-center " style="padding-top:100px;">
             <div class="col-md-12">
                 <img src="assets/img/logo.png" />

@@ -15,7 +15,9 @@ body.login{
     background-color:#dddede; 
     color:#939598;
 }
+
 body {
+    
     font-family: 'Questrial', sans-serif;
     line-height:25px;
     font-family: 'Open Sans',serif;
@@ -28,21 +30,151 @@ button.login{
     border-radius: 4px;
 }
 
+
+/*==============================================
+General pages   
+=============================================*/
+
+/*.navbar-cls-top .navbar-brand:hover {
+    background: #dddede;
+    color: #fff;
+} */
+
+
+/* user image*/
+.user-img-div {
+    background-color: #646669;
+    
+}
+
+ 
+/* user image text*/
+.user-img-div .inner-text {
+        text-align: center;
+        position: relative;
+        color: #dddede;
+        font-weight: 800;
+        padding-bottom: 10px;
+        
+    }
+
+
+
+
+/*left navigation DIV that holds the width margin for left navigation LE*/
+.navbar-side {
+    border: none;
+    background-color: #646669;
+    z-index: 1;
+    position: absolute;
+    width: 290px;
+    margin-top: 15px;
+    
+}
+
+
+/*left navigation active LE*/
+#active-menu {
+    background-color: #939598;
+   
+}
+
+
+/*left navigation  LE*/
+.sidebar-collapse .nav {
+    padding: 0;
+    min-height: 1200px;
+    
+    }
+
+
+/*left navigation li>>a  LE*/
+.sidebar-collapse .nav > li > a {
+    color: #f2f2f2;
+    background: #646669;
+    text-shadow: none;
+    padding: 15px 40px;
+    border-bottom: 1px solid #939598;
+    padding: 15px 10px;
+    border-right:1px solid #646669;        
+        }
+
+
+
+/*left navigation li>>a hovering  LE*/
+.sidebar-collapse .nav > li > a:hover,
+.sidebar-collapse .nav > li > a:focus {
+    background: #cdcfd1;
+    outline: 0;
+    }
+
+
+
+/*left navigation second level li>>a  LE*/
+.nav-second-level li,
+.nav-third-level li {
+    border-bottom: none !important;
+    padding-left: 37px;
+}
+
+
+/*left navigation second,third level li>>a  LE*/
+.nav-second-level > li:last-child > a:after,
+.nav-third-level > li:last-child > a:after {
+    height: 50%;
+}
+
+
+/*left navigation second,third level li>>a  LE*/
+.nav-third-level > li > a:after,
+.nav-third-level > li > a:before {
+    left: 40px;
+}
+
+
+
+/*left navigation second,third level li>>a  LE*/    
+.nav-third-level li a {
+    padding-left: 55px;
+    }
+
+
+
+
+
 #wrapper {
     width: 100%;
-    background: #555555;
+    background-color: #dddede;
+    font-family: 'Questrial', sans-serif;
+    line-height:25px;
+    font-family: 'Open Sans',serif;
 }
 
 #page-wrapper {
     padding: 15px 15px;
     min-height: 600px;
-    background: #656565;
+    background: #dddede;
+    margin: 0 0 0 260px;
+    padding: 15px 30px;
+    
+    }
+
 }
 
+
+/* margin for logo LE */
+#logomargin{
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 0
+}
+
+
+/* Content div LE */
 #page-inner {
     width: 100%;
-    margin: 10px 20px 10px 0px;
-    background-color: #f2f2f2!important;
+    margin: 0px;
+    background-color: #939598!important;
     padding: 10px;
     min-height: 1200px;
 }
@@ -50,10 +182,10 @@ button.login{
 .page-head-line {
     font-size: 30px;
     text-transform: uppercase;
-    color: #124a76;
+    color: #f2f2f2;
     font-weight: 800;
     padding-bottom: 20px;
-    border-bottom: 2px solid #656565;
+    border-bottom: 2px solid #f2f2f2;
     margin-bottom: 10px;
 }
 
@@ -73,56 +205,13 @@ button.login{
     =============================================*/
 
 
-.navbar-cls-top .navbar-brand {
-    color: #fff;
-    background: #124a76;
-    width: 260px;
-    text-align: center;
-    height: 75px;
-    font-size: 20px;
-    letter-spacing: 1px;
-    font-weight: 900;
-    padding-top: 25px;
-    text-transform:uppercase;
-}
 
-.header-right {
-    color: #fff;
-    padding: 15px 50px 5px 50px;
-    float: left;
-    font-size: 16px;
-}
 
-.navbar-cls-top .navbar-brand:hover {
-    background: #555555;
-    color: #fff;
-}
 
-.user-img-div {
-    min-height: 140px;
-    padding: 20px;
-    background-color: #f2f2f2;
-}
 
-    .user-img-div img {
-        max-height: 60px;
-    }
 
-    .user-img-div .inner-text {
-        text-align: right;
-        position: relative;
-        color: #555555;
-        font-weight: 800;
-        line-height: 25px;
-    }
 
-.active-menu {
-    background-color: #555555 !important;
-    
-}
-.active-menu-top {
-    background-color: #000!important;
-}
+
 
 .arrow {
     float: right;
@@ -137,87 +226,15 @@ button.login{
 }
 
 
-.nav-second-level li,
-.nav-third-level li {
-    border-bottom: none !important;
-}
-
-    .nav-second-level li a {
-        padding-left: 37px;
-    }
-
-    .nav-third-level li a {
-        padding-left: 55px;
-    }
-
-.sidebar-collapse, .sidebar-collapse .nav {
-    background: none;
-}
-
-    .sidebar-collapse .nav {
-        padding: 0;
-    }
-
-        .sidebar-collapse .nav > li > a {
-            color: #fff;
-            background: #124a76;
-            text-shadow: none;
-            padding: 15px 40px;
-            border-bottom: 1px solid #002f60;
-        }
-
-    .sidebar-collapse > .nav > li > a {
-        padding: 15px 10px;
-    }
-
-    .sidebar-collapse .nav > li > a:hover,
-    .sidebar-collapse .nav > li > a:focus {
-        background: #555555;
-        outline: 0;
-    }
 
 
 
-.nav-second-level > li:last-child > a:after,
-.nav-third-level > li:last-child > a:after {
-    height: 50%;
-}
-
-.nav-third-level > li > a:after,
-.nav-third-level > li > a:before {
-    left: 40px;
-}
-
-.navbar-side {
-    border: none;
-    background-color: #202020;
-}
-
+/*TOP background color LE*/
 .navbar-cls-top {
-    background: #656565;
-    border-bottom: none;
+    background: #dddede;
+    border: none;
 }
 
-
-.navbar-default {
-    border: 0px solid black;
-}
-
-.navbar-header {
-    background: #000000;
-}
-
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    background-color: #00CA79;
-}
-
-.navbar-default .navbar-toggle {
-    border-color: #fff;
-}
-
-    .navbar-default .navbar-toggle .icon-bar {
-        background-color: #FFF;
-    }
 
 .nav > li > a > i {
     margin-right: 10px;
@@ -243,21 +260,35 @@ button.login{
     MEDIA QUERIES     
     =============================================*/
 
-@media (min-width:768px) {
-    #page-wrapper {
-        margin: 0 0 0 260px;
-        padding: 15px 30px;
-        min-height: 1200px;
-    }
-
-
-    .navbar-side {
-        z-index: 1;
-        position: absolute;
-        width: 260px;
-    }
 
     .navbar {
         border-radius: 0px;
     }
+
+/* content headings /table headings table outer border LE */
+
+.panel-info {
+  border-color: #939598;
+    background-color: #dddede;
+}
+
+.panel-body{
+    border-color: #f2f2f2;
+}
+
+/* content headings inner table LE */
+.panel-info > .panel-heading {
+  color: #656668;
+  background-color: #dddede;
+  border-color: #f2f2f2;
+}
+
+thead{
+    color: #939598;
+    background-color: #f2f2f2;
+    border:#656668;
+}
+
+.table-bordered{
+    border-bottom-style: inset;
 }
