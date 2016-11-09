@@ -15,80 +15,19 @@
    ?>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>Orders</title>
 
-    <!-- BOOTSTRAP STYLES-->
-    <link href="../assets/css/bootstrap.css" rel="stylesheet" />
-    <!-- FONTAWESOME STYLES-->
-    <link href="../assets/css/font-awesome.css" rel="stylesheet" />
-    <!--CUSTOM BASIC STYLES-->
-    <link href="../assets/css/basic.css" rel="stylesheet" />
-    <!--CUSTOM MAIN STYLES-->
-    <link href="../assets/css/custom.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-    
-    <style>
-        body{
-            font-family: 'Questrial', sans-serif;
-        }
-    </style>
-    
 </head>
     
     
 <body>
     <div id="wrapper">
-        <nav class="navbar navbar-cls-top " role="navigation" >
-            
-            <img  src="../assets/img/logo.png" style="margin:5px " >
-            
-        </nav>
-        <!-- Left navigation with user details  -->
-        <nav class="navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-                    <li>
-                        <?php
-                        include '../config/db_confg.php';
-                        $query = $conn->query("select * from users1 where uid='$uid'");
-                        while($row = mysqli_fetch_assoc($query)){
-                        ?>
-                        
-                        <div class="user-img-div">
-                            <img class="photo" src="<?php echo $row['location']; ?>" >
-                            <?php } ?>
-                            <br><br>
-                            
-                            <div class="inner-text">
-                               <?php echo $user->get_fullname($uid); ?>
-                                                     
-                            </div>
-                        </div>
-
-                    </li>
-
-
-                    <li>
-                        <a class="active-menu" href="orders.php"><i class="fa fa-dashboard "></i>Orders</a>
-                    </li>
-                    <li>
-                        <a href="stock.php"><i class="fa fa-desktop "></i>Stock</a>
-                         
-                    </li>
-                      
-                    <li>
-                        <a href='../login.php?q=logout'><i class="fa fa-flash "></i>Logout</a>
-                    </li>
-                </ul>
-
-            </div>
-
-        </nav>
-        <!-- /. NAV SIDE  -->
+        <?php include '../config/stockheader.php'; ?>
+  
+        <!-- Main content -->
         <div id="page-wrapper">
             <div id="page-inner">
                 <div class="row">
@@ -190,20 +129,14 @@
     </div>
             </div>
     <!-- /. WRAPPER  -->
-    <div id="footer-sec">
-        &copy; 2016 Lassana Party | Design By : <a href="http://www.binarytheme.com/" target="_blank">Root Fixers</a>
-    </div>
+
+    <?php include '../config/footer.php'; ?>
     <!-- /. FOOTER  -->
-    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
-    <!-- JQUERY SCRIPTS -->
-    <script src="../assets/js/jquery-1.10.2.js"></script>
+
+ 
     <!-- BOOTSTRAP SCRIPTS -->
     <script src="../assets/js/bootstrap.js"></script>
-     <!-- METISMENU SCRIPTS -->
-    <script src="../assets/js/jquery.metisMenu.js"></script>
-    <!-- CUSTOM SCRIPTS -->
-    <script src="../assets/js/custom.js"></script>
-
+    
 
 </body>
 </html>

@@ -15,81 +15,18 @@
    ?>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Orders</title>
 
-    <!-- BOOTSTRAP STYLES-->
-    <link href="../assets/css/bootstrap.css" rel="stylesheet" />
-    <!-- FONTAWESOME STYLES-->
-    <link href="../assets/css/font-awesome.css" rel="stylesheet" />
-    <!--CUSTOM BASIC STYLES-->
-    <link href="../assets/css/basic.css" rel="stylesheet" />
-    <!--CUSTOM MAIN STYLES-->
-    <link href="../assets/css/custom.css" rel="stylesheet" />
-    <!-- GOOGLE FONTS-->
-    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-    
-    <style>
-        body{
-            font-family: 'Questrial', sans-serif;
-        }
-    </style>
-    
+<head>
+   
+    <title>Orders</title>
+  
 </head>
     
     
-<body>
+<body id="orders">
     <div id="wrapper">
-        <nav class="navbar navbar-cls-top " role="navigation" >
-            
-            <img  src="../assets/img/logo.png" style="margin:5px " >
-            
-        </nav>
-        <!-- Left navigation with user details  -->
-        <nav class="navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-                    <li>
-                        <?php
-                        include '../config/db_confg.php';
-                        $query = $conn->query("select * from users1 where uid='$uid'");
-                        while($row = mysqli_fetch_assoc($query)){
-                        ?>
-                        
-                        <div class="user-img-div">
-                            <img class="photo" src="<?php echo $row['location']; ?>" >
-                            <?php } ?>
-                            <br><br>
-                            
-                            <div class="inner-text">
-                               <?php echo $user->get_fullname($uid); ?>
-                                                     
-                            </div>
-                        </div>
-
-                    </li>
-
-
-                    <li>
-                        <a id="active-menu" href="orders.php"><i class="fa fa-dashboard "></i>Orders</a>
-                    </li>
-                    <li>
-                        <a href="reservation.php"><i class="fa fa-desktop "></i>Reservation</a>
-                         
-                    </li>
-                    
-                    <li>
-                        <a href='../login.php?q=logout'><i class="fa fa-flash "></i>Logout</a>
-                    </li>
-                </ul>
-
-            </div>
-
-        </nav>
-        
+    	<?php include '../config/clerkheader.php'; ?>
+  
         <!-- Main content -->
         <div id="page-wrapper">
             <div id="page-inner">
@@ -102,15 +39,15 @@
                 </div>
                 <!-- /. ROW  -->
                <div class="col-sm-3 col-md-3 pull-right">
-            <form  method="post" action="searchorder.php">
-               <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Search" name="srch" id="srch-term">
-                  <div class="input-group-btn">
+            		<form  method="post" action="searchorder.php">
+               		<div class="input-group">
+                 	 <input type="text" class="form-control" placeholder="Search" name="srch" id="srch-term">
+                  	<div class="input-group-btn">
                      <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                  </div>
-               </div>
-            </form>
-         </div>
+                  	</div>
+               		</div>
+            		</form>
+         		</div>
          <br/>
          <br>
             <div  class="row">
@@ -177,7 +114,7 @@
                         
                         
                         ?>
-                     <!-- End  Kitchen Sink -->
+                     <!-- End  -->
                 </div>
                 
             </div>
@@ -190,20 +127,18 @@
     </div>
             </div>
     <!-- /. WRAPPER  -->
-    <div id="footer-sec">
-        &copy; 2016 Lassana Party | Design By : <a href="http://www.binarytheme.com/" target="_blank">Root Fixers</a>
-    </div>
+    
+
+    <?php include '../config/footer.php'; ?>
     <!-- /. FOOTER  -->
-    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
-    <!-- JQUERY SCRIPTS -->
-    <script src="../assets/js/jquery-1.10.2.js"></script>
+
+ 
     <!-- BOOTSTRAP SCRIPTS -->
     <script src="../assets/js/bootstrap.js"></script>
-     <!-- METISMENU SCRIPTS -->
-    <script src="../assets/js/jquery.metisMenu.js"></script>
-    <!-- CUSTOM SCRIPTS -->
-    <script src="../assets/js/custom.js"></script>
 
+    <!-- Navigation SCRIPTS -->
+    <script src="../assets/js/active.js" > </script>
+    
 
 </body>
 </html>

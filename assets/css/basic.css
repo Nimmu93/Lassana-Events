@@ -54,7 +54,8 @@ General pages
         position: relative;
         color: #dddede;
         font-weight: 800;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
+        font-size: 18px;
         
     }
 
@@ -91,7 +92,7 @@ General pages
 /*left navigation li>>a  LE*/
 .sidebar-collapse .nav > li > a {
     color: #f2f2f2;
-    background: #646669;
+    background: #D2527F;
     text-shadow: none;
     padding: 15px 40px;
     border-bottom: 1px solid #939598;
@@ -155,7 +156,7 @@ General pages
     min-height: 600px;
     background: #dddede;
     margin: 0 0 0 260px;
-    padding: 15px 30px;
+    padding: 15px 0px 0px 30px;
     
     }
 
@@ -243,8 +244,8 @@ General pages
     FOOTER  STYLES    
     =============================================*/
 #footer-sec {
-    background-color:#555555;
-    padding:20px 50px;
+    background-color:#646669;
+    padding:20px 10px;
     color:#fff;
     font-size:12px;
 }
