@@ -219,9 +219,8 @@
                             <div class="col-md-4 portfolio-item margin-bottom-40 design">
                                 <div>
                                     <a href="#">
-                        
                                         <figure>
-                                            <img id="myimg" src="<?php echo $row['location']; ?>" alt="chair1" width="60%" height="70%" style="margin-left:20%">
+                                            <img id="<?php echo $row['Item_ID'];?>" src="<?php echo $row['location']; ?>" alt="<?php echo $row['Item_ID'];?>" width="60%" height="70%" style="margin-left:20%">
                                             
                                             <figcaption style="text-align:center">
                                                 <h3 id="itemid"><?php echo $row['Item_Name']; ?></h3>
@@ -229,7 +228,6 @@
                                                 <span><br>Click on the image to zoom</span>
                                             </figcaption>
                                         </figure>
-                                        
                                     </a>
                                 </div>
                             </div>
@@ -239,17 +237,9 @@
                         
                     
             <!-- Zooming Items -->  
-            <div id="myModal" class="modal">
-                <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-                <img class="modal-content" id="img01">
-                <div id="caption"></div>
-            </div>
+            
                     
-            <div id="myModal" class="modal">
-                <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-                <img class="modal-content" id="img01">
-                <div id="caption"></div>
-            </div>
+            
             <!-- === END CONTENT === -->
             
              <!-- Filter Buttons -->

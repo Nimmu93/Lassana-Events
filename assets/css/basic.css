@@ -43,7 +43,7 @@ General pages
 
 /* user image*/
 .user-img-div {
-    background-color: #646669;
+    background-color: #dddede;
     
 }
 
@@ -52,7 +52,7 @@ General pages
 .user-img-div .inner-text {
         text-align: center;
         position: relative;
-        color: #dddede;
+        color: #D2527F;
         font-weight: 800;
         padding-bottom: 20px;
         font-size: 18px;
@@ -84,7 +84,7 @@ General pages
 /*left navigation  LE*/
 .sidebar-collapse .nav {
     padding: 0;
-    min-height: 1200px;
+    height: 100%;
     
     }
 
@@ -106,6 +106,7 @@ General pages
 .sidebar-collapse .nav > li > a:hover,
 .sidebar-collapse .nav > li > a:focus {
     background: #cdcfd1;
+    color: #D2527F;
     outline: 0;
     }
 
@@ -146,13 +147,12 @@ General pages
 #wrapper {
     width: 100%;
     background-color: #dddede;
-    font-family: 'Questrial', sans-serif;
     line-height:25px;
     font-family: 'Open Sans',serif;
 }
 
 #page-wrapper {
-    padding: 15px 15px;
+    
     min-height: 600px;
     background: #dddede;
     margin: 0 0 0 260px;
@@ -234,6 +234,8 @@ General pages
 .navbar-cls-top {
     background: #dddede;
     border: none;
+    height: 100px;
+
 }
 
 
