@@ -75,7 +75,7 @@
                                     </div>
 
                                     <p class="change_link" style="margin-top:10px;">
-                                        <a href="forgotpasswrd/rcvrpasswrd.php" class="to_register">Forgot Your Password?</a>
+                                        <a href="config/forgotpassword/rcvrpasswrd.php" class="to_register">Forgot Your Password?</a>
                                     </p>
                                     <hr />
                                    
