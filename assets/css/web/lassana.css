@@ -24,7 +24,8 @@ TABLE OF CONTENTS
 
 /*lp*/
 html {
-  overflow-y: scroll;
+ 
+
 } /*Clip the top/bottom edges of the content inside the <div> element - if it overflows the element's content area*/
 
 /*lp*/
@@ -53,8 +54,8 @@ body {
 /*lp*/
 .container {
   max-width: 1080px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
   width: 100%;
 }
 
@@ -234,7 +235,7 @@ ul.topnav li.icon {display: none;}
 /*lp*/
 /* header with dark color and kept above all */
 .is-sticky #header {
-  background-color: rgba(0,0,0,0.9);
+  background-color: #22313F;
   z-index: 20;
 }
 
@@ -255,7 +256,7 @@ ul.topnav li.icon {display: none;}
 /*lp*/
 /* header nav bar with dark color */
 .is-sticky #hornav ul#hornavmenu {
-  background-color: rgba(0,0,0,0.9);
+  background-color: #22313F;
 }
 
 
@@ -266,7 +267,7 @@ ul.topnav li.icon {display: none;}
 #header {
   position: relative;
   
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #22313F;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   height: 120px;
@@ -280,6 +281,142 @@ ul.topnav li.icon {display: none;}
 /* Logo */
 .logo {
   text-align: center;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* top nav bar */ 
+/*-----------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------------*/
+/* slider */ 
+/*-----------------------------------------------------------------------------------*/
+
+#slider{
+  height:400px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* HOME PAGE specific */
+/*-----------------------------------------------------------------------------------*/
+
+/*lp --- one stop shop and online reservation*/
+#homeicons{
+  font-size: 30px;
+  color: #939598;
+  font-family: Questrial;
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+/*lp --- items topics*/
+#topic{
+  color:#f2f2f2;
+  font-size: 30px;
+  font-family: Questrial;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+/*lp --- m and v*/
+#mv{
+  font-size: 20px;
+  color: #656668;
+  font-family: Questrial, serif;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+/*lp --- m and v title*/
+#mvtitle{
+  font-size: 30px;
+  color: #939598;
+  font-family: Questrial;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+
+
+
+/*lp --- testimonials title*/
+#testimonials{
+  font-size: 30px;
+  color: #f2f2f2;
+  font-family: Questrial;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+/*lp --- testimonials description*/
+#testdes{
+  font-size: 20px;
+  color: #939598;
+  font-family: Questrial;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.testimage {
+  display: block;
+  width: 100%;
+  height: 60vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 40rem) {
+  .testimage {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition: width 1.3s ease-in-out, height 1.3s ease-in-out;
+    transition: width 1.3s ease-in-out, height 1.3s ease-in-out;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  .item:hover .testimage {
+    width: 110%;
+    height: 120%;
+  }
+}
+/*-----------------------------------------------------------------------------------*/
+/* image responsive | home page */
+/*-----------------------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/* backgound | home page */
+/*-----------------------------------------------------------------------------------*/
+#back{
+  background-color: #22313F;
+  box-sizing: inherit;
+  
 }
 
 
@@ -565,7 +702,7 @@ input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
 
 /*lp*/
 #hornav ul {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #22313F;
   border-radius: 0 0 5px 5px;
   display: inline-block;
   margin: 0;
@@ -575,18 +712,18 @@ input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
 
 /*lp*/
 #hornav ul > li {
-  margin: 0px 5px;
+  margin: 0px 20px;
 }
 
 
 /*lp*/
 #hornav ul > li > a,
 #hornav ul > li > span {
-  color: #FFFFFF;
-  font-size: 12px;
+  color: #939598;
+  font-size: 14px;
   font-weight: 300;
   letter-spacing: 1px;
-  padding: 18px 20px;
+  padding: 18px 5px;
   text-transform: uppercase;
   display: block;
 }
@@ -996,7 +1133,7 @@ img {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding-right: 10px;
-  color: rgba(0, 0, 0, 0.6);
+  color: #939598;
 }
 /* Joomla Menus */
 .menu li [class^="fa-"]:before,
@@ -1029,8 +1166,8 @@ img {
 /* Top Menu Icons */
 #hornav li [class^="fa-"]:before,
 #hornav li [class*=" fa-"]:before {
-  color: rgba(255, 255, 255, 0.8);
-  top: 12px;
+  color: #939598;
+  top: 0px;
   left: 12px;
   font-size: 18px;
 }
@@ -1265,7 +1402,7 @@ a.slicknav_item [class*=" fa-"] {
   top: 0;
   left: 0;
   padding: 30px 40px;
-  background-color: #124a76;
+  background-color: #22313F;
   text-align: left;
   text-transform: none;
   position: relative;
@@ -1323,16 +1460,23 @@ a.slicknav_item [class*=" fa-"] {
 
 /*lp*/
 .portfolio-item figcaption {
-  border-top: 5px solid #13344e;
-  color: #ffffff;
+  border-top: 5px solid #22313F;
+  color: #f2f2f2;
   top: 0;
   left: 0;
   padding: 30px 40px;
-  background-color: #124a76;
+  background-color: #22313F;
   text-align: left;
   text-transform: none;
   position: relative;
   z-index: 1;
+}
+
+/*lp*/
+.portfolio-item figcaption h2 {
+  
+  color: #f2f2f2;
+  
 }
 
 

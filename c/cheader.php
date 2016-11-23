@@ -112,6 +112,23 @@
                                     <a href="contact.html"><span class="fa-phone">Contact</span></a>
                                     
                                 </li>
+
+                                <li>
+                                    <a href="cart.php"><span class="fa fa-shopping-cart">Cart</span>
+                                    <?php
+                                    
+                                    $Total = 0;
+                                    $cartSesID=3574;
+                                    foreach ($_SESSION as $value) {////if start
+                                        if($value[0] == $cartSesID){
+                                            $Total += 1;
+                                        }//end if
+                                    }
+                                    echo " "." <b>".$Total."</b> ";
+                                    ?>
+                                    items</a>
+                                    
+                                </li>
                             
                                 
                             </ul>

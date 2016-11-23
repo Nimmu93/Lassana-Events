@@ -2,8 +2,7 @@
 <head>
     <!-- Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-    <link href="../assets/css/web/slider.css" rel="stylesheet" type="text/css" />
-    <script src="../assets/js/web/slider.js" type="text/javascript"></script>
+    
     
 
 <style>

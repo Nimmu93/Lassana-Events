@@ -9,17 +9,23 @@
         <link rel="stylesheet" href="../assets/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" href="../assets/css/web/lassana.css" rel="stylesheet">
         <link rel="stylesheet" href="../assets/css/web/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/css/web/imgres.css" rel="stylesheet">
+
+        
 
         <!-- Google Fonts-->
         <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet"> 
 
         <style>
-            
+            a{
+
+            }
         </style>
 
 <!-- === Start HEADER === -->
             <div id="header">
-                <div class="container">
+                <div class="container no-padding">
                     <div class="row">
                         <!-- Logo -->
                         <div class="logo">
@@ -32,84 +38,59 @@
                 </div>
             </div>
             <!-- Top Menu -->
-            <div id="hornav" class="container no-padding">
+
+            <div id="hornav" class="container no-padding ">
                 <div class="row">
-                    <div class="col-md-12 no-padding">
+                    <div class="col-xs-12 col-sm-12 col-md-12 no-padding">
                         
                             <ul id="hornavmenu" class="topnav" >
                                 <li>
-                                    <a href="index.html" class="fa-home">Home</a>
+                                    <a href="index.php" ">Home</a>
                                 </li>
                                 
                                 <li>
-                                    <span class="fa-table">Furniture</span>
-                                    <ul>
-                                        <li>
-                                            <a href="chairs.php">Chairs</a>
-                                        </li>
-                                        <li>
-                                            <a href="tables.html">Tables</a>
-                                        </li>
-                                        
-                                        
-                                    </ul>
+                                     <a href="chairs.php">Chairs</a>
                                 </li>
                                 
                                 <li>
-                                    <a href="tents.html"><span class="fa-flag">Tents</span></a>
+                                    <a href="tables.php"><span >Tables</span></a>
                                     
                                 </li>
                                 
                                 <li>
-                                    <a href="catering.html"><span class="fa-spoon">Catering</span> </a>
+                                    <a href="marquees.php"><span >Marquees</span> </a>
                                     
                                 </li>
                                 
                                  <li>
-                                    <span class="fa-gears">More Service</span>
-                                    <ul>
-                                        <li>
-                                            <a href="cutlery.html">Cutlery</a>
-                                        </li>
-                                        <li>
-                                            <a href="crockery.html">Crockery</a>
-                                        </li>
-                                        <li>
-                                            <a href="glassware.html">Glassware</a>
-                                        </li>
-                                        <li>
-                                            <a href="stage.html">Stage & Band Setup</a>
-                                        </li>
-                                        <li>
-                                            <a href="dishes.html">Chaffing Dishes</a>
-                                        </li>
-                                        <li>
-                                            <a href="bowls.html">Soup and Dessert Bowls</a>
-                                        </li>
-                                        
-                                    </ul>
+                                     <a href="more.php">More services</a>
                                 </li>
                                 
                                 <li>
-                                    <span class="fa-camera">Gallery</span>
-                                    <ul>
-                                        <li>
-                                            <a href="weddings.html">Wedding</a>
-                                        </li>
-                                        <li>
-                                            <a href="parties.html">Party</a>
-                                        </li>
-                                        <li>
-                                            <a href="Official.html">Official</a>
-                                        </li>
-                                        
-                                    </ul>
+                                    <a href="gallery.php">Gallery</a>
                                 </li>
                                 
                                 <li>
-                                    <a href="contact.html"><span class="fa-phone">Contact</span></a>
+                                    <a href="contact.php">Contact </a>
+                                </li>
+
+                                <li>
+                                    <a href="cart.php"><span class="fa fa-shopping-cart" >
+                                    <?php
+                                    
+                                    $Total = 0;
+                                    $cartSesID=3574;
+                                    foreach ($_SESSION as $value) {////if start
+                                        if($value[0] == $cartSesID){
+                                            $Total += 1;
+                                        }//end if
+                                    }
+                                    echo " "." <b>".$Total."</b> ";
+                                    ?>
+                                     </span> Items</a>
                                     
                                 </li>
+
 
                                 <li class="icon">
                                     <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
