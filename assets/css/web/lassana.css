@@ -30,12 +30,15 @@ html {
 
 /*lp*/
 body {
-  font-family: PT Sans;
+  font-family: 'Questrial', sans-serif;
   font-size: 14px;
-  background-color: #124a76;
+  background-color: #f2f2f2;
   color: #656565;
 }
 
+/*lp remove underline in hyperlinks*/
+a
+{text-decoration: none !important;}
 
 /*lp*/
 #body-bg {
@@ -302,15 +305,54 @@ ul.topnav li.icon {display: none;}
 
 /*lp --- one stop shop and online reservation*/
 #homeicons{
-  font-size: 30px;
+  font-size: 26px;
   color: #939598;
-  font-family: Questrial;
-  text-align: left;
   margin-left: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
 
 }
+
+/*lp --- offers circle*/
+#pinkcircle{
+  background: #ee529c;
+  border-bottom: 2px solid #f2f2f2;
+}
+
+#greencircle{
+  background: #c1d82f;
+  border-bottom: 2px solid #f2f2f2;
+}
+
+#orangecircle{
+  background: #faa634;
+  border-bottom: 2px solid #f2f2f2;
+}
+
+/*lp --- offers circle image*/
+#hole{
+  
+}
+/*lp --- offers title*/
+#offer{
+  position: relative;
+  font-size: 26px;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+/*lp --- offers description*/
+#offerdetails{
+  font-size: 18px;
+  color: #22313F;
+  text-align: center;
+}
+
+/*lp --- offers bottom border*/
+#borderbottom{
+  border-bottom: 2px solid #f2f2f2;
+}
+
 
 /*lp --- items topics*/
 #topic{
@@ -332,28 +374,32 @@ ul.topnav li.icon {display: none;}
   text-align: center;
   margin-left: 10px;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 
 }
 
 /*lp --- m and v title*/
 #mvtitle{
-  font-size: 30px;
-  color: #939598;
+  font-size: 26px;
+  color: #22313F;
   font-family: Questrial;
   text-align: center;
   margin-left: 10px;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 20px;
 
 }
 
+/*lp --- m and v box*/
+#mvbox{
+background-color: #f2f2f2; 
+}
 
 
 
 /*lp --- testimonials title*/
 #testimonials{
-  font-size: 30px;
+  font-size: 26px;
   color: #f2f2f2;
   font-family: Questrial;
   text-align: center;
@@ -367,11 +413,11 @@ ul.topnav li.icon {display: none;}
 #testdes{
   font-size: 20px;
   color: #939598;
-  font-family: Questrial;
   text-align: center;
   margin-left: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
+  padding-bottom: 15%;
 
 }
 
@@ -419,7 +465,65 @@ ul.topnav li.icon {display: none;}
   
 }
 
+/*-----------------------------------------------------------------------------------*/
+/* item pages*/
+/*-----------------------------------------------------------------------------------*/
+/*lp --- pagination styles*/
 
+ul.pag {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+/*lp --- pagination styles*/
+ul.pag > li {
+  display: inline;
+}
+
+/*lp --- pagination styles*/
+ul.pag > li > a {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.42857143;
+  color: #22313F;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+/*lp --- pagination styles*/
+ul.pag > li > a:hover{
+  color: #f2f2f2;
+  background-color: #22313F;
+  border-color: #ddd;
+}
+
+/*lp --- item blocks*/
+#block{
+  color: #22313F;
+  background-color: #f2f2f2;
+  border-color: #ddd;
+  margin-right: 25px;
+  margin-left: 25px;
+  margin-top: 25px;
+  padding: 10px;
+ 
+
+}
+
+#block:hover{
+  box-shadow: -1px 2px 26px -1px rgba(242,242,242,1);
+}
+
+/*lp --- item blocks heading.. h3*/
+#itemid{
+  color: #22313F;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /* Footer */
@@ -589,17 +693,17 @@ ul.topnav li.icon {display: none;}
 /* Button Colors */
 /*lp*/
 .btn {
-  border-radius: 0px;
-    background-color: #124a76;
-    color: #ffffff;
-     border-radius: 5px;
+  background-color: #f2f2f2;
+  color: #22313F;
+  border: 3px solid #22313F; 
 }
 
 
 /*lp*/
 .btn:hover{
-    background-color: #656565;
-    color: #ffffff;
+  background-color: #22313F;
+  color: #f2f2f2;
+  border: 3px solid #22313F;
     
 }
 
@@ -672,8 +776,8 @@ input[type=reset]{
 
 /*lp*/
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
-    background-color: #656565;
-    color: #ffffff;
+    background-color: #22313F;
+    color: #f2f2f2;
     
 }
 

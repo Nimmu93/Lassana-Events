@@ -1,13 +1,13 @@
 <?php $con = mysqli_connect('localhost','root','','lassanaparty'); ?>
 <?php   session_start();    ?>
-<!-- === BEGIN HEADER === -->
+
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+
 <html lang="en">
     
     <head>
-        <!-- Title -->
-        <title >Lassana Eventa | Home </title>
+        
+        <title >Lassana Events | Home </title>
 
     </head>
 
@@ -56,7 +56,7 @@
 
                                 <!--.fa-shopping-cart .fa-credit-card .fa-magic .fa-star-half-full .fa-home -->
 
-                                    <p id=homeicons> <span class="fa-home"> </span> 
+                                    <p id=homeicons style="text-align: right;"> <span class="fa-home"> </span> 
                                         
                                     <p>
                                     
@@ -64,7 +64,7 @@
                                  
                             
                              </div>
-                             <div class="col-xs-10 col-sm-10 col-md-5  portfolio-item ">
+                             <div class="col-xs-10 col-sm-10 col-md-3  portfolio-item ">
 
                                  <!--.fa-shopping-cart .fa-credit-card .fa-magic .fa-star-half-full .fa-home -->
 
@@ -80,19 +80,42 @@
 
                                  <!--.fa-shopping-cart .fa-credit-card .fa-magic .fa-star-half-full .fa-home -->
 
-                                    <p id=homeicons> <span class="fa-credit-card"> </span> 
+                                    <p id=homeicons style="text-align: right;"> <span class="fa-credit-card"> </span> 
                                         
                                     <p>
                                     
   
                             
                              </div>
-                             <div class="col-xs-10 col-sm-10 col-md-5  portfolio-item ">
+                             <div class="col-xs-10 col-sm-10 col-md-3  portfolio-item ">
+
+                                 <!--.fa-shopping-cart .fa-credit-card .fa-magic .fa-star-half-full .fa-home -->
+
+                                    <p id=homeicons style="border-right: 1px solid #939598;">  
+                                        Online Reservation
+                                    </p>
+                                    
+
+                                   
+                            
+                             </div>
+                             <div class="col-xs-2 col-sm-2 col-md-1  portfolio-item ">
+
+                                 <!--.fa-shopping-cart .fa-credit-card .fa-magic .fa-star-half-full .fa-home -->
+
+                                    <p id=homeicons style="text-align: right;"> <span class="fa-phone-square"> </span> 
+                                        
+                                    <p>
+                                    
+  
+                            
+                             </div>
+                             <div class="col-xs-10 col-sm-10 col-md-3  portfolio-item ">
 
                                  <!--.fa-shopping-cart .fa-credit-card .fa-magic .fa-star-half-full .fa-home -->
 
                                     <p id=homeicons>  
-                                        Online Reservation
+                                         011 5 623131
                                     </p>
                                     
 
@@ -109,12 +132,13 @@
                     <div class="row">
                         <!--<div class="col-md-12 portfolio-group no-padding">
                             <!-- chairs -->
-                            <div class="col-xs-12 col-sm-6 col-md-4  portfolio-item ">
+                            <div class="col-xs-12 col-sm-12 col-md-4  portfolio-item ">
                                 
-                                    <a href="chairs.html">
+                                    <a href="chairs.php">
                                         <div class="item">
-                                        <img src="../assets/img/website/slider/dummy1.jpg" alt="" class="bg_img" />
+                                        <img src="../assets/img/website/index/chair.jpg" alt="" class="bg_img" />
                                         <div class="text_wrapper">
+                                        <img id="hole" src="../assets/img/website/index/circle.png">
                                         <div class="text_position">
                                         <h2 id="topic">Chairs</h2>
                                         
@@ -127,12 +151,13 @@
                             </div>
                             <!-- End chairs -->
                             <!-- Tables-->
-                            <div class="col-xs-12 col-sm-6 col-md-4  portfolio-item ">
+                            <div class="col-xs-12 col-sm-12 col-md-4  portfolio-item ">
                                 
-                                    <a href="Tables.html">
+                                    <a href="tables.php">
                                         <div class="item">
-                                        <img src="../assets/img/website/slider/dummy2.jpg" alt="" class="bg_img" />
+                                        <img src="../assets/img/website/index/table.jpg" alt="" class="bg_img" />
                                         <div class="text_wrapper">
+                                        <img id="hole" src="../assets/img/website/index/circle.png">
                                         <div class="text_position">
                                         <h2 id="topic">Tables</h2>
                                         
@@ -146,12 +171,13 @@
                             <!-- End Portfolio Item -->
                             <!-- Portfolio Item -->
                             <!-- Marquee-->
-                            <div class="col-xs-12 col-sm-6 col-md-4  portfolio-item ">
+                            <div class="col-xs-12 col-sm-12 col-md-4  portfolio-item ">
                                 
-                                    <a href="chairs.html">
+                                    <a href="marquees.php">
                                         <div class="item">
-                                        <img src="../assets/img/website/slider/dummy2.jpg" alt="" class="bg_img" />
+                                        <img src="../assets/img/website/index/marquee.jpg" alt="" class="bg_img" />
                                         <div class="text_wrapper">
+                                        <img id="hole" src="../assets/img/website/index/circle.png">
                                         <div class="text_position">
                                         <h2 id="topic">Marquees</h2>
                                         
@@ -167,84 +193,139 @@
                         </div>
                         <!-- === END items content === -->
 
-
-
-                        <!-- === start mission vision content === -->
+                        <!-- start offers -->
                         <div class="row">
+
+                            <div id="borderbottom">
+
+                            <div class="col-xs-12 col-sm-12 col-md-4  portfolio-item ">
+
+                                <div id="pinkcircle">
+
+                                    <img id="hole" src="../assets/img/website/index/circle.png">
+                                        <div class="text_position">
+                                        <h3 id="offer">Offer!</h3>
+                                        <p id="offerdetails">10% LOL </p>
+                                        </div>
+                                </div>
+
+                            </div> 
+
+                            <div class="col-xs-12 col-sm-12 col-md-4  portfolio-item ">
+
+                                <div id="greencircle">
+
+                                    <img id="hole" src="../assets/img/website/index/circle.png">
+                                        <div class="text_position">
+                                        <h3 id="offer">Offer!</h3>
+                                        <p id="offerdetails">10% LOL </p>
+                                        </div>
+                                </div>
+                                
+                            </div> 
+
+                            <div class="col-xs-12 col-sm-12 col-md-4  portfolio-item ">
+
+                                <div id="orangecircle">
+
+                                    <img id="hole" src="../assets/img/website/index/circle.png">
+                                        <div class="text_position">
+                                        <h3 id="offer">Offer!</h3>
+                                        <p id="offerdetails">10% LOL </p>
+                                        </div>
+                                </div>
+                                
+                            </div> 
+                            </div>     
+                        </div>
+            
+                    <!-- End offers -->
+
+
+                           
+                            
+                        
+
+                        <!-- === Start Testimonials content === -->
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-4 col-md-4  portfolio-item ">
+
+                                <img src="../assets/img/website/index/michael.jpg" alt="" class="testimage" />
+
+                                    <img id="hole" src="../assets/img/website/index/circle.png">
+                                    
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-8  portfolio-item ">
+
+                                        <h3 id="testimonials">Michael Wijeysooriya <br>Fashion Designer</h3> 
+                                        <p id="testdes">"My number one choice for marquees and other event requirements is Lassana Party. They have set a new benchmark for high quality party items and their service is outstanding. "</p>
+                                       
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            
+
+                            <div class="col-xs-12 col-sm-4 col-md-4  portfolio-item ">
+
+                                <img src="../assets/img/website/index/michael.jpg" alt="" class="testimage" />
+
+                                    <img id="hole" src="../assets/img/website/index/circle.png">
+                                    
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-8  portfolio-item ">
+
+                                        <h3 id="testimonials">S.Walpola <br>MD Web company</h3> 
+                                        <p id="testdes">"I was absolutely amazed by the professionalism and reliability of Lassana Party Services. They took care of everything perfectly and most importantly my family was very happy"</p>
+                                       
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-4 col-md-4  portfolio-item ">
+
+                                <img src="../assets/img/website/index/michael.jpg" alt="" class="testimage" />
+
+                                    <img id="hole" src="../assets/img/website/index/circle.png">
+                                    
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-8  portfolio-item ">
+
+                                        <h3 id="testimonials">M.V.Sampath Priyankara <br>MD Event Media</h3> 
+                                        <p id="testdes">"Very well trained and experienced event coordinators. They went above and beyond to provide my requirement to the last minute details.. Perfect."</p>
+                                       
+                            </div>
+
+                            
+                        </div>
+       
+                   <!-- === END Testimonials content === -->
+
+
+
+                   <!-- === start mission vision content === -->
+                    <!--    <div class="row">
                         <!--<div class="col-md-12 portfolio-group no-padding">
                             <!-- m and v-->
-                            <div class="col-xs-12 col-sm-12 col-md-12  portfolio-item ">
+                           <!-- <div class="col-xs-12 col-sm-12 col-md-12  portfolio-item ">
                                 
-                                    
+                                    <div id="mvbox">
                                         
                                         <h2 id=mvtitle >Vision</h2>
                                         <p id=mv>
                                         Lassana Party aims to ensure that your special occasions are memorable, unique and stress free. We deliver the highest quality products and services, ensuring that each event we handle far exceeds expectations.</p>
                                         
                                         
-                                    
+                                    </div>
                                     
                                     
                             </div>
                             <!-- End m and v -->
-                        </div>
-                        <!-- === End mission vision content === -->    
-                            
-                        
-
-                        <!-- === Start Testimonials content === -->
-                        <div class="row">
-                        <!--<div class="col-md-12 portfolio-group no-padding">
-                            <!-- michael -->
-                            <div class="col-xs-12 col-sm-6 col-md-4  portfolio-item ">
-                                
-                                    <a href="chairs.html">
-                                        <div class="item">
-                                        <img src="../assets/img/website/index/m.jpg" alt="" class="bg_img" />
-                                        
-                                        <div class="text_wrapper">
-                                        <img src="../assets/img/website/index/michael.jpg" alt="" class="testimage" />
-                                        
-                                        </div>
-                                        </div>
-                                    </a>
-                                    
-                            </div>
-                            <!-- End micael -->
-                            <!-- walpola-->
-                            <div class="col-xs-12 col-sm-6 col-md-4  portfolio-item ">
-                                
-                                    <a href="chairs.html">
-                                        <div class="item">
-                                        <img src="../assets/img/website/index/s.jpg" alt="" class="bg_img" />
-                                        
-                                        <div class="text_wrapper">
-                                        <img src="../assets/img/website/index/walpola.jpg" alt="" class="testimage" />
-                                        
-                                        </div>
-                                        </div>
-                                    </a>
-                                    
-                            </div>
-                            <!-- End walpola -->
-                            <!-- Portfolio Item -->
-                            <!-- sampath-->
-                            <div class="col-xs-12 col-sm-6 col-md-4  portfolio-item ">
-                                
-                                    <a href="chairs.html">
-                                        <div class="item">
-                                        <img src="../assets/img/website/index/p.jpg" alt="" class="bg_img" />
-                                        
-                                        <div class="text_wrapper">
-                                        <img src="../assets/img/website/index/priyankara.jpg" alt="" class="testimage" />
-                                        
-                                        </div>
-                                        </div>
-                                    </a>
-                            </div>
-                        </div>
-                            <!-- End sampath -->
-                   <!-- === END Testimonials content === -->
+                        <!--</div>
+                        <!-- === End mission vision content === --> 
 
                 <!-- === start footer content === -->
                         <div class="row">

@@ -7,7 +7,7 @@
                         
                         <div >
                             
-                            <p id="mv">www.lassanaparty.com <span class="glyphicon glyphicon-copyright-mark"></span>   2016 | Designed by Root Fixers</p>
+                            <p id="mv">www.lassanaevents.com <span class="glyphicon glyphicon-copyright-mark"></span>   2016 | Designed by Root Fixers</p>
                         </div>
                     </div>
                 </div>
