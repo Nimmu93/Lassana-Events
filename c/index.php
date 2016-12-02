@@ -195,17 +195,28 @@
 
                         <!-- start offers -->
                         <div class="row">
-
+                        
                             <div id="borderbottom">
 
                             <div class="col-xs-12 col-sm-12 col-md-4  portfolio-item ">
 
-                                <div id="pinkcircle">
+                                <div id="offer">
+                                    <div>
+                                        <img  src="../assets/img/website/index/pink.jpg" class="offerback">
+
+                                    </div>
 
                                     <img id="hole" src="../assets/img/website/index/circle.png">
                                         <div class="text_position">
-                                        <h3 id="offer">Offer!</h3>
-                                        <p id="offerdetails">10% LOL </p>
+                                        <div class ="offer" >
+                                        
+                                        <?php 
+                                        $sql = "SELECT title,details FROM offers WHERE id = '1'"; 
+                                        $result = mysqli_query ($con,$sql); //run the query
+                                        $row = mysqli_fetch_row($result);
+                                        echo "<h3>".$row[0]."</h3>"."<p>".$row[1]."</p>";?>  
+                                        
+                                        </div>
                                         </div>
                                 </div>
 
@@ -213,12 +224,22 @@
 
                             <div class="col-xs-12 col-sm-12 col-md-4  portfolio-item ">
 
-                                <div id="greencircle">
+                                <div id="offer">
+                                    <div>
+                                        <img  src="../assets/img/website/index/green.jpg" class="offerback">
+                                    </div>
 
                                     <img id="hole" src="../assets/img/website/index/circle.png">
                                         <div class="text_position">
-                                        <h3 id="offer">Offer!</h3>
-                                        <p id="offerdetails">10% LOL </p>
+                                        <div class ="offer">
+                                        
+                                        <?php 
+                                        $sql = "SELECT title,details FROM offers WHERE id = '2'"; 
+                                        $result = mysqli_query ($con,$sql); //run the query
+                                        $row = mysqli_fetch_row($result);
+                                        echo "<h3>".$row[0]."</h3>"."<p>".$row[1]."</p>";?>  
+                                        
+                                        </div>
                                         </div>
                                 </div>
                                 
@@ -226,34 +247,45 @@
 
                             <div class="col-xs-12 col-sm-12 col-md-4  portfolio-item ">
 
-                                <div id="orangecircle">
+                                <div id="offer">
+                                    <div>
+                                        <img  src="../assets/img/website/index/orange.jpg" class="offerback">
+                                    </div>
 
                                     <img id="hole" src="../assets/img/website/index/circle.png">
                                         <div class="text_position">
-                                        <h3 id="offer">Offer!</h3>
-                                        <p id="offerdetails">10% LOL </p>
+                                        <div class ="offer">
+                                        
+                                        <?php 
+                                        $sql = "SELECT title,details FROM offers WHERE id = '3'"; 
+                                        $result = mysqli_query ($con,$sql); //run the query
+                                        $row = mysqli_fetch_row($result);
+                                        echo "<h3>".$row[0]."</h3>"."<p>".$row[1]."</p>";?>  
+                                        
+                                        </div>
                                         </div>
                                 </div>
                                 
                             </div> 
-                            </div>     
+                            </div> 
+
+                            
+
                         </div>
             
                     <!-- End offers -->
 
-
-                           
-                            
-                        
-
-                        <!-- === Start Testimonials content === -->
+                    <!-- === Start Testimonials content === -->
                         <div class="row">
 
-                            <div class="col-xs-12 col-sm-4 col-md-4  portfolio-item ">
+                            <div class="col-xs-12 col-sm-4 col-md-4  portfolio-item " >
+                                <div style="margin-bottom: 100%">
 
-                                <img src="../assets/img/website/index/michael.jpg" alt="" class="testimage" />
+                                <img src="../assets/img/website/index/michael.jpg" alt=""  class="testback"/>
 
-                                    <img id="hole" src="../assets/img/website/index/circle.png">
+                                <img id="hole" src="../assets/img/website/index/circle.png">
+
+                                </div>
                                     
                             </div>
                             <div class="col-xs-12 col-sm-8 col-md-8  portfolio-item ">
@@ -266,14 +298,15 @@
 
                         <div class="row">
 
-                            
+                            <div class="col-xs-12 col-sm-4 col-md-4  portfolio-item " >
+                                <div style="margin-bottom: 100%">
 
-                            <div class="col-xs-12 col-sm-4 col-md-4  portfolio-item ">
+                                <img src="../assets/img/website/index/michael.jpg" alt="" class="testback" />
+                                
+                                <img id="hole" src="../assets/img/website/index/circle.png">
 
-                                <img src="../assets/img/website/index/michael.jpg" alt="" class="testimage" />
+                                </div>
 
-                                    <img id="hole" src="../assets/img/website/index/circle.png">
-                                    
                             </div>
                             <div class="col-xs-12 col-sm-8 col-md-8  portfolio-item ">
 
@@ -286,10 +319,13 @@
                         <div class="row">
 
                             <div class="col-xs-12 col-sm-4 col-md-4  portfolio-item ">
+                                <div style="margin-bottom: 100%">
 
-                                <img src="../assets/img/website/index/michael.jpg" alt="" class="testimage" />
+                                <img src="../assets/img/website/index/michael.jpg" alt="" class="testback" />
 
                                     <img id="hole" src="../assets/img/website/index/circle.png">
+
+                                </div>
                                     
                             </div>
                             <div class="col-xs-12 col-sm-8 col-md-8  portfolio-item ">

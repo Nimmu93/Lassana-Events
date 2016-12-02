@@ -65,6 +65,11 @@
                         <a href="inbox.php"><i class="fa fa-inbox "></i>Inbox</a>
                          
                     </li>
+
+                    <li>
+                        <a href="offers.php"><i class="fa fa-magic "></i>Offers</a>
+                         
+                    </li>
                     
                     <li>
                         <a href='../login.php?q=logout'><i class="fa fa-flash "></i>Logout</a>

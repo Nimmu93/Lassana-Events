@@ -54,6 +54,8 @@ html {
   height: 60vw;
   -o-object-fit: cover;
      object-fit: cover;
+     position: relative;
+     z-index: 1;
 }
 @media screen and (min-width: 40rem) {
   .bg_img {

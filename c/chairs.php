@@ -9,6 +9,10 @@
         
         <title >Lassana Events | Chairs </title>
 
+        <style type="text/css">
+                
+        </style>
+
     </head>
 
     <body>
@@ -16,10 +20,6 @@
             
             <?php include '../config/cheader.php'; ?>
 
-
-
-            
-            
             <!-- === BEGIN CONTENT === -->
            
             
@@ -35,24 +35,33 @@
                     
                     <!-- === start items content === -->
                     <div class="row">
+
+                    <!-- php pagination function -->
+                    
                     <?php $num_rec_per_page=6;
                     if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; }; 
                     $start_from = ($page-1) * $num_rec_per_page; 
                     $sql = "SELECT * FROM stock LIMIT $start_from, $num_rec_per_page"; 
                     $rs_result = mysqli_query ($con,$sql); //run the query
                     ?> 
-                    <!-- html crap-->
+                    
                     <?php 
                     while ($row = mysqli_fetch_assoc($rs_result)) { 
                         $id = $row['Item_ID'];
                     ?> 
                         <div class="col-xs-12 col-sm-12 col-md-4 portfolio-item margin-bottom-40 design">
                             <div id="block">
-                            <a>   
-                            <img id="myimg" src="<?php echo $row['location']; ?>" alt="chair1" width="60%" height="70%" style="margin-left:20%">
-                                            
+                            <a>
+                            <div>
+                            <img id="hole" src="../assets/img/website/items/circle.png">
+                            </div>
+                            <div>
+                            <img id="myimg" src="<?php echo $row['location']; ?>" alt="chair1" width="60%" height="60%" style="margin-left:20%;margin-top: 8%">
+                            </div>  
+                            <div style="z-index: 4;position: relative;">             
                             <h3 id="itemid"><?php echo $row['Item_Name']; ?></h3>
                             <span><br>Click on the image to zoom</span>
+                            </div>
 
                             <!--starts cart -->   
                             <?php

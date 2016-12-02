@@ -75,6 +75,8 @@ a
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
+    z-index: 1;
+    position: relative;
     
 }
 /*lp*/
@@ -331,10 +333,50 @@ ul.topnav li.icon {display: none;}
 
 /*lp --- offers circle image*/
 #hole{
+  z-index: 2;
+  position: absolute;
+}
+
+/*lp --- offers z-index manage block only*/
+#offer{
+  
+  margin-bottom: 100%;
   
 }
+
+/*lp --- offers back only*/
+.offerback{
+  z-index: 0;
+  position: absolute;
+}
+
+/*lp --- offers z-index manage content only*/
+.offer{
+  z-index: 1;
+  position:absolute;
+  margin-top: 30%;
+  margin-left: 25%;
+}
+
+@media screen and (min-width: 1200px) {
+    .offer {
+        margin-top: 40%;
+        margin-left: 70%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .offer {
+        margin-top: 50%;
+        margin-left: 0%;
+    }
+}
+
+
+
+
 /*lp --- offers title*/
-#offer{
+.offer>h3{
   position: relative;
   font-size: 26px;
   color: #f2f2f2;
@@ -342,7 +384,7 @@ ul.topnav li.icon {display: none;}
 }
 
 /*lp --- offers description*/
-#offerdetails{
+.offer>p{
   font-size: 18px;
   color: #22313F;
   text-align: center;
@@ -390,12 +432,14 @@ ul.topnav li.icon {display: none;}
 
 }
 
-/*lp --- m and v box*/
-#mvbox{
-background-color: #f2f2f2; 
+
+
+/*lp --- testimonials back only*/
+.testback{
+  z-index: 0;
+  position: absolute;
+  
 }
-
-
 
 /*lp --- testimonials title*/
 #testimonials{
@@ -430,7 +474,7 @@ background-color: #f2f2f2;
 }
 @media screen and (min-width: 40rem) {
   .testimage {
-    position: absolute;
+    position: relative;
     z-index: 0;
     width: 100%;
     height: 100%;
@@ -506,7 +550,7 @@ ul.pag > li > a:hover{
 /*lp --- item blocks*/
 #block{
   color: #22313F;
-  background-color: #f2f2f2;
+  background-color: #EEEEEE;
   border-color: #ddd;
   margin-right: 25px;
   margin-left: 25px;
@@ -523,6 +567,8 @@ ul.pag > li > a:hover{
 /*lp --- item blocks heading.. h3*/
 #itemid{
   color: #22313F;
+  text-align: center;
+  margin-top: 5%;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -1169,22 +1215,10 @@ h2 {
 }
 
 
-/*lp*/
-h3 {
-  font-size: 20px;
-  font-weight: 300;
-  padding: 0;
-  font-family: 'Roboto Condensed', sans-serif;
-  margin: 0;
-  color: #555555;
-}
 
 
-h3.title {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding-bottom: 5px;
-  margin-bottom: 15px;
-}
+
+
 
 
 /*lp*/
