@@ -141,12 +141,12 @@
 
                             if(isset($_POST['create'])){
 
-                               $image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
-                               $image_name = addslashes($_FILES['image']['name']);
-                               $image_size = getimagesize($_FILES['image']['tmp_name']);
+                               // $image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
+                               // $image_name = addslashes($_FILES['image']['name']);
+                               // $image_size = getimagesize($_FILES['image']['tmp_name']);
                         
-                               move_uploaded_file($_FILES["image"]["tmp_name"], "images/" . $_FILES["image"]["name"]);
-                               $location = "images/" . $_FILES["image"]["name"];
+                               // move_uploaded_file($_FILES["image"]["tmp_name"], "images/" . $_FILES["image"]["name"]);
+                               // $location = "images/" . $_FILES["image"]["name"];
             
                                 $id = $_POST['item_id'];
                                 $type = $_POST['type1'];
@@ -155,22 +155,14 @@
                                 $amount = $_POST['total-amount'];
                                 $uprice = $_POST['unit_price'];
 
-                                $additem = "insert into stock(Item_ID,Item_Name,Item_Type,Unit_Price,location,color,Total_Stock) values ('$id','$name','$type','$uprice','$location','$color','$amount')";
+                                $additem = "insert into stock(Item_ID,Item_Name,Item_Type,Unit_Price,color,Total_Stock) values ('$id','$name','$type','$uprice','$color','$amount')";
                                 $result1=mysqli_query($conn, $additem);
 
 
-                                echo    "<script type='text/javascript' language='javascript'>
-
-                                            alert('A new Item has been added');
-   
-                                        </script>";
-
-
-
-
                             ?>
+
                             <script>
-                                window.location = 'additems.php';
+                                window.location = 'index.php';
                             </script>
                             <?php
                             }

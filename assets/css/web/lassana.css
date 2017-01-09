@@ -34,11 +34,13 @@ body {
   font-size: 14px;
   background-color: #f2f2f2;
   color: #656565;
+
 }
 
 /*lp remove underline in hyperlinks*/
 a
-{text-decoration: none !important;}
+{text-decoration: none !important;
+color:#939598; }
 
 /*lp*/
 #body-bg {
@@ -60,6 +62,7 @@ a
   padding-left: 25px;
   padding-right: 25px;
   width: 100%;
+
 }
 
 
@@ -70,17 +73,6 @@ a
 }
 
 
-/*lp*/
-#myimg{
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    z-index: 1;
-    position: relative;
-    
-}
-/*lp*/
-#myimg:hover {opacity: 0.7;}
 
 
 /*lp*/
@@ -1674,7 +1666,74 @@ ul.grid li:first-child a {
 
 
 
+/*-----------------------------------------------------------------------------------*/
+/* contact page */
+/*-----------------------------------------------------------------------------------*/
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #939598;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  color: #939598;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+
+#contacth{
+  color: #939598;
+  text-align: center;
+}
+
+#contact{
+  color: #939598;
+  
+}
 
 
+/*-----------------------------------------------------------------------------------*/
+/* gallery page */
+/*-----------------------------------------------------------------------------------*/
 
-
+.gal{
+  
+  position: relative;
+  border: 1px solid #333;
+  margin: 2%;
+  overflow: hidden;
+  width: 540px;
+}
+.gal img {
+  max-width: 100%;
+  
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.gal:hover img {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
