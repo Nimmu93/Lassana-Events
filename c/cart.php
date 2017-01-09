@@ -1,61 +1,36 @@
-<?php $con = mysqli_connect('localhost','root','','lassanaparty'); ?>
+<?php include '../config/db_confg.php'; ?>
 <?php   session_start();    ?>
 
 <!DOCTYPE html>
-
 <html lang="en">
-    
     <head>
-        
         <title >Lassana Events | Cart </title>
-
     </head>
 
     <body>
         <div id="body-bg">
-            
-            <?php include '../config/cheader.php'; ?>
 
-
-
-            
-            
-            <!-- === BEGIN CONTENT === -->
-           
-            
-            <div id="content">
-
-                
+            <!-- === HEADER  === -->
+            <?php include 'pageheader.php'; ?>   
             <div class="container ">
             <div id="back">
-           
-            <!-- === start content  === -->        
-            <div id="content">
-                
-                  <div style="margin-top:15px;" class="row">
-                   <div class="col-md-12">
-                   <div class="panel-body">
-                   
-                        <?php
-                        
-                        include 'db_confg.php';
-                        $cartSesID=3574;
-                           
-                                            
-                            // print table heads//
-                            
 
-                                echo ('<div class="table-responsive"><table border=1 class="table table-bordered" >
+            <!-- === START CONTENT  === -->        
+                <div style="margin-top:15px;" class="row">
+                <div class="col-md-12">
+                <div class="panel-body">
+                <?php
+                    $cartSesID=3574;
+                    // print table heads//
+                    echo ('<div class="table-responsive"><table border=1 class="table table-bordered" >
                                     <thead style="background-color:#656565;color:#ffffff;">
                                     <tr>
-
                                         <th>Item</th>
                                         <th>Item Name</th>
                                         <th>Unit Prize</th>
                                         <th>Qty</th>
                                         <th>Subtotal</th>
                                         <th></th>
-                                        
                                     </tr></thead>');
                              
                              
@@ -148,41 +123,26 @@
                                 }
                             
                         ?>
-                     <!-- End  Kitchen Sink -->
+                     <!-- End   -->
                 </div>
                 </div>
                 </div>
-                
-                    
-            <!-- === END items content === -->
 
-                    
-                <!-- === start footer content === -->
+                <!-- === START FOOTER === -->
                         <div class="row">
-                        <!--<div class="col-md-12 portfolio-group no-padding">-->
-                            
-                            <div class="col-xs-12 col-sm-12 col-md-12  portfolio-item ">
+                        <div class="col-xs-12 col-sm-12 col-md-12  portfolio-item ">
                              
-                              <?php include '../config/cfooter.php'; ?>
+                              <?php include 'pagefooter.php'; ?>
 
-                            </div>
-                            
                         </div>
-                 <!-- === End footer content === -->    
-            
-            
-            <!-- === END ITEMS content === --> 
+                        </div>
+                <!-- === END FOOTER === -->  
+              
+            <!-- === END CONTENT === --> 
 
-
-            
-                    
-           
-
-        </div> <!-- this div closes the space that makes all the content fall under same alignment /<div class="container ">-->
-
-    </div> <!--<div id="content"> -->
-
-</div> <!--<div id="body-bg"> -->
+        </div> <!--<div id="back"> -->
+        </div> <!--<div id="container"> -->
+        </div> <!--<div id="body-bg"> -->
 
 </body>
 
