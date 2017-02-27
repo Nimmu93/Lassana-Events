@@ -1,6 +1,7 @@
 <?php
  include '../config/db_confg.php';
 
+<<<<<<< HEAD
  $boolean = TRUE;
  $nameErr = $emailErr = $contactErr =  "";
 
@@ -56,6 +57,21 @@ if(isset($_POST["contact"])){$contact = test_input($_POST["contact"]);}
   
 }
   $sql="UPDATE users1 SET uid='$empID',employee_type='$empType',uname='$uname',fullname='$fname',contact='$contact',Address='$address',uemail='$email',location='$image' WHERE uid LIKE '%".$empID."%'; ";
+=======
+  $empID=$_POST['empID'];
+  $empType = $_POST['empType'];
+  $fname = $_POST['fname'];
+  $lname = $_POST['lname'];
+  //$password = $_POST['password'];
+  $contact = $_POST['contact'];
+  $nic = $_POST['nic'];
+  $address = $_POST['address'];
+  $email = $_POST['email'];
+  $image = $_POST['image'];
+
+  //$sql="UPDATE employee SET Name='$name',NIC='$nic',Address='$address',Telephone='phone' WHERE Emp_No LIKE '%".$empNo."%'; ";
+  $sql="UPDATE users1 SET uid='$empID',employee_type='$empType',uname='$fname',fullname='$lname',contact='$contact',Address='$address',uemail='$email',location='$image' WHERE uid LIKE '%".$empID."%'; ";
+>>>>>>> origin/master
   $result = mysqli_query($conn, $sql);
 
   if ($result){

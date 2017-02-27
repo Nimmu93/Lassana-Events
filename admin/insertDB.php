@@ -1,5 +1,6 @@
 <?php
  include '../config/db_confg.php';
+<<<<<<< HEAD
  $boolean = TRUE;
  $nameErr = $emailErr = $contactErr =  "";
 
@@ -63,6 +64,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
   $sql="INSERT INTO users1 VALUES ('$empID','$empType','$password','$uname','$fname','$contact','$nic','$address','$email','$location')";
+=======
+
+  $empID=$_POST['empID'];
+  $empType = $_POST['empType'];
+  $fname = $_POST['fname'];
+  $lname = $_POST['lname'];
+  $password = $_POST['password'];
+  $contact = $_POST['contact'];
+  $nic = $_POST['nic'];
+  $address = $_POST['address'];
+  $email = $_POST['email'];
+  $image = $_POST['image'];
+
+  $sql="INSERT INTO users1 VALUES ('$empID','$empType','$password','$fname','$lname','$contact','$nic','$address','$email','$image')";
+>>>>>>> origin/master
   $result = mysqli_query($conn, $sql);
 
   if ($result){
