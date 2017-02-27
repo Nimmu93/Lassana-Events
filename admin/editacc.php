@@ -33,78 +33,58 @@
                     <div class="col-md-12">
                         <h1 class="page-head-line">Edit Account</h1>
                     </div>
+                    <div class="panel-heading">
+                           <form action="editacc1.php" method="POST" class="form-horizontal form-label-left" novalidate>
+                              <div class="title_left">
+                                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                                  <div class="input-group">
+                                    <input id="empID" name="empID" type="text" class="form-control" placeholder="Emp ID">
+                                    <span class="input-group-btn">
+                                      <button id="search" name="search" type="submit" class="btn btn-default" value="search">Search</button>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                          </form>
+                        </div>
                 </div>
                 <!-- /. ROW  -->
 				
 				<div class="col-md-6 col-sm-6 col-xs-12">
-                  <div class="panel panel-info">
-                        <div class="panel-heading">
-                           Edit ACCOUNT FORM
-                        </div>
+                    <div class="panel panel-info">
                         <div class="panel-body">
-                            <form role="form">
-                                        
-                                 <div class="form-group">
-                                            <label>Employee ID</label>
-                                            <input class="form-control" type="text">
-                                    </div>
-								<div class="form-group">
-                                            <label>Employee Type</label>
-                                            <input class="form-control" type="text">
-                                    </div>
-								<div class="form-group">
-                                            <label>First Name</label>
-                                            <input class="form-control" type="text">
-                                    </div>
-								<div class="form-group">
-                                            <label>Last Name</label>
-                                            <input class="form-control" type="text">
-                                    </div>
-                                 <div class="form-group">
-                                            <label>Enter Password</label>
-                                            <input class="form-control" type="password">
-                                     </div>
-                                <div class="form-group">
-                                            <label>Re Type Password </label>
-                                            <input class="form-control" type="password">
-                                      </div>
-								<div class="form-group">
-                                            <label>Contact Number</label>
-                                            <input class="form-control" type="number" min="10" max="10">
-                                    </div>
-								<div class="form-group">
-                                            <label>NIC Number</label>
-                                            <input class="form-control" type="text" maxlength="10">
-                                    </div>
-								<div class="form-group">
-                                            <label>Address</label>
-                                            <input class="form-control" type="text">
-                                    </div>
-								<div class="form-group">
-                                            <label>E-mail Address</label>
-                                            <input class="form-control" type="text">
-                                    </div>
-								<div class="form-group">
-                                            <label>Image</label>
-                                            <input type="file" name="pic" accept="image/*">
-                                    </div>	
-									
-								<!-- <div class="form-group">
-									<label class="control-label col-lg-4">Image Upload</label>
-									<div class="">
-										<div class="fileupload fileupload-new" data-provides="fileupload">
-											<div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"></div>
-											<div>
-												<span class="btn btn-file btn-success"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file"></span>
-												<a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
-											</div>
-										</div>
-									</div>
-								</div>	 -->
-								 
-                                 <button type="submit" class="btn btn-info">UPDATE </button>
-
-                             </form>
+                            <?php
+                    include '../config/db_confg.php';
+                    $select = "SELECT * FROM users1 ";
+                    $result = mysqli_query($conn, $select);
+                    if ( mysqli_num_rows($result) > 0) {
+                                            
+                            // print table heads//
+                                
+                                echo ('<div class="table-responsive"><table border=1 class="table table-bordered" >
+                                    <thead style="background-color:#656565;color:#ffffff;">
+                                    <tr>
+                                        <th>Employee ID</th>
+                                        <th>Employee Type</th>
+                                        <th>Employee Name</th>                                        
+                                    </tr></thead>');
+                                    echo("<tbody>");
+                                    // output data from row by row
+                                    while($row = mysqli_fetch_assoc($result)) {
+                                       
+                                        echo (
+                                        "<tr>
+                                          
+                                                <td> " . $row["uid"]. "  </td>
+                                                <td>" . $row["employee_type"] . "</td>
+                                                <td>" . $row["fullname"]." </td>
+                                           
+                                        </tr>");
+                                    }
+                                   echo ("</tbody></table></div>");
+                        }
+                        mysqli_close($conn);
+                        ?>
                          </div>
                      </div>
                  </div>

@@ -61,7 +61,7 @@
                              <?php
                         include '../config/db_confg.php';
                         
-                            $select = "SELECT * FROM orders ";
+                            $select = "SELECT * FROM orders_new ";
                             $result = mysqli_query($conn, $select);
                             
                                                        
@@ -74,9 +74,9 @@
                                     <tr>
 
                                         <th>Order ID</th>
-                                        <th>Date</th>
+                                        <th>Reservation Date</th>
                                         <th>Customer Name</th>
-                                        <th>Customer Number</th>
+                                        <th>Contact Number</th>
                                         <th>City</th>
                                         <th></th>
                                         
@@ -90,17 +90,17 @@
                                        
                                         echo (
                                         "<tr>
-                                            <form method=\"post\" action=\"showorders.php\">
-                                                <td>" . $row["order_id"] . "</td>
-                                                <td>" . $row["date"] . "</td>
-                                                <td>" . $row["cname"] . "</td>
-                                                <td>" . $row["cnumber"] . "</td>
-                                                <td>" . $row["city"] . "</td>
+                                            <form method=\"post\" action=\"showorders.php\" target=\"_blank\">
+                                                <td>" . $row["ResID"] . "</td>
+                                                <td>" . $row["ResDate"] . "</td>
+                                                <td>" . $row["CusName"] . "</td>
+                                                <td>" . $row["ConNum"] . "</td>
+                                                <td>" . $row["District"] . "</td>
                                                 <td>
-                                                <input name=\"resid\" type=\"hidden\" id=\"resid\" value=\"".$row["order_id"]."\"\>
+                                                <input name=\"resid\" type=\"hidden\" id=\"resid\" value=\"".$row["ResID"]."\"\>
                                                 <input class=\"delete1\" name=\"show\" type=\"submit\" id=\"show\" value=\"View Details\">
                                                 </td>
-                                                                                    
+                                           
                                               
                                             </form>
                                         </tr>");

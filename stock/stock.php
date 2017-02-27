@@ -178,7 +178,7 @@
                 </div>
                         
             <!-- Update Stock -->
-                 <div id="page-inner">
+                 <!--<div id="page-inner">
                 <div class="row">
 
                     <div class="col-md-12">
@@ -199,63 +199,63 @@
                         </div>
                     </div>
                             
-                </div>
+                </div> -->
 
-                <?php
+                <!-- <?php
 
-                include '../config/db_confg.php';
+                //include '../config/db_confg.php';
 
-                if(isset($_POST['add'])){
+                //if(isset($_POST['add'])){
                    
-                    $item_ID = $_POST['item_ID'];
-                    $qu = $_POST['quantity'];
+                   // $item_ID = $_POST['item_ID'];
+                   // $qu = $_POST['quantity'];
 
-                    $abc = "UPDATE stock SET Total_Stock = Total_Stock + '$qu' WHERE Item_ID = '$item_ID'";      
+                   // $abc = "UPDATE stock SET Total_Stock = Total_Stock + '$qu' WHERE Item_ID = '$item_ID'";      
                     
-                    $result2 = mysqli_query($conn, $abc);
+                   // $result2 = mysqli_query($conn, $abc);
 
-                    $xyz = "SELECT Total_Stock from stock WHERE Item_ID = '$item_ID' ";
-                    $result1 = mysqli_query($conn, $xyz);
+                   // $xyz = "SELECT Total_Stock from stock WHERE Item_ID = '$item_ID' ";
+                   // $result1 = mysqli_query($conn, $xyz);
                     
-                    $row =mysqli_fetch_assoc($result1);
-                    $Stock= $row['Total_Stock'];
+                   // $row =mysqli_fetch_assoc($result1);
+                   // $Stock= $row['Total_Stock'];
 
 
-                    echo    "<script type='text/javascript' language='javascript'>
+                   // echo    "<script type='text/javascript' language='javascript'>
 
-                                    alert('Stock Updated Successfully. New Stock is $Stock');
+                                   // alert('Stock Updated Successfully. New Stock is $Stock');
    
-                                </script>";
+                               // </script>";
                     
 
-                }
-                else if(isset($_POST['rmv'])){
+                //}
+                //else if(isset($_POST['rmv'])){
 
                     
-                    $item_ID = $_POST['item_ID'];
-                    $qu = $_POST['quantity'];
+                  //  $item_ID = $_POST['item_ID'];
+                  //  $qu = $_POST['quantity'];
 
-                    $abc = "UPDATE stock SET Total_Stock = Total_Stock - '$qu' WHERE Item_ID = '$item_ID'";      
+                  //  $abc = "UPDATE stock SET Total_Stock = Total_Stock - '$qu' WHERE Item_ID = '$item_ID'";      
                     
-                    $result2 = mysqli_query($conn, $abc);
+                   // $result2 = mysqli_query($conn, $abc);
 
-                    $xyz = "SELECT Total_Stock from stock WHERE Item_ID = '$item_ID' ";
-                    $result1 = mysqli_query($conn, $xyz);
+                  //  $xyz = "SELECT Total_Stock from stock WHERE Item_ID = '$item_ID' ";
+                  //  $result1 = mysqli_query($conn, $xyz);
                     
-                    $row =mysqli_fetch_assoc($result1);
-                    $Stock= $row['Total_Stock'];
+                  //  $row =mysqli_fetch_assoc($result1);
+                  //  $Stock= $row['Total_Stock'];
 
 
-                    echo    "<script type='text/javascript' language='javascript'>
+                 //   echo    "<script type='text/javascript' language='javascript'>
 
-                                            alert('Stock Updated Successfully. New Stock is $Stock');
+                                            //alert('Stock Updated Successfully. New Stock is $Stock');
    
-                                        </script>";;
+                                        //</script>";;
 
 
-                }
+                //}
 
-                ?>
+               //?>
                     </div>
 
                 </div>
@@ -264,7 +264,7 @@
             </div>
                         
              <!-- Update Stock -->
-            </div>
+            <!--</div>
             <!-- /. PAGE INNER  -->
 
         </div>

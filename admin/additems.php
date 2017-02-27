@@ -43,11 +43,10 @@
                         </div>
                         <div class="panel-body">
                             <form method="post" action="" enctype="multipart/form-data">
-                                        
-                                 <div class="form-group">
-                                            <label>Item ID</label>
-                                            <input class="form-control" required type="text" name="item_id">
-                                    </div>
+                                <div class="form-group">
+                                    <label>Item ID</label>
+                                    <input class="form-control" required type="text" name="item_id">
+                                </div>
 								<div class="form-group">
                                             <label>Item Type</label>
                                             <div class="radio">
@@ -112,7 +111,7 @@
 									
 								<div class="form-group">
                                             <label>Image</label> <br>
-                                            <img id="uploadPreview"  height="50%" width="50%" src="assets/img/demoUpload.jpg" >
+                                            <img id="uploadPreview"  height="30%" width="30%" src="../assets/img/upload.jpg" >
                                             <br>
                                             <br>
                                             <input id="uploadImage" type="file" name="image" onchange="PreviewImage();" />
@@ -141,12 +140,13 @@
 
                             if(isset($_POST['create'])){
 
-                               // $image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
-                               // $image_name = addslashes($_FILES['image']['name']);
-                               // $image_size = getimagesize($_FILES['image']['tmp_name']);
+                               $image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
+                               $image_name = addslashes($_FILES['image']['name']);
+                               $image_size = getimagesize($_FILES['image']['tmp_name']);
                         
-                               // move_uploaded_file($_FILES["image"]["tmp_name"], "images/" . $_FILES["image"]["name"]);
-                               // $location = "images/" . $_FILES["image"]["name"];
+                               move_uploaded_file($_FILES["image"]["tmp_name"], "../assets/img/website/stock/".$image_name);
+                               echo $image_name;
+                               $location = "../assets/img/website/stock/" . $_FILES["image"]["name"];
             
                                 $id = $_POST['item_id'];
                                 $type = $_POST['type1'];
@@ -155,14 +155,22 @@
                                 $amount = $_POST['total-amount'];
                                 $uprice = $_POST['unit_price'];
 
-                                $additem = "insert into stock(Item_ID,Item_Name,Item_Type,Unit_Price,color,Total_Stock) values ('$id','$name','$type','$uprice','$color','$amount')";
+                                $additem = "insert into stock(Item_ID,Item_Name,Item_Type,Unit_Price,location,color,Total_Stock) values ('$id','$name','$type','$uprice','$location','$color','$amount')";
                                 $result1=mysqli_query($conn, $additem);
 
 
-                            ?>
+                                echo    "<script type='text/javascript' language='javascript'>
 
+                                            alert('A new Item has been added');
+   
+                                        </script>";
+
+
+
+
+                            ?>
                             <script>
-                                window.location = 'index.php';
+                                window.location = 'additems.php';
                             </script>
                             <?php
                             }

@@ -16,9 +16,6 @@
             
             <?php include 'c/indexheader.php'; ?>
 
-
-
-            
             
             <!-- === BEGIN CONTENT === -->
            
@@ -134,7 +131,7 @@
                             <!-- chairs -->
                             <div class="col-xs-12 col-sm-12 col-md-4  portfolio-item ">
                                 
-                                    <a href="chairs.php">
+                                    <a href="c/chairs.php">
                                         <div class="item">
                                         <img src="assets/img/website/index/chair.jpg" alt="" class="bg_img" />
                                         <div class="text_wrapper">
@@ -153,7 +150,7 @@
                             <!-- Tables-->
                             <div class="col-xs-12 col-sm-12 col-md-4  portfolio-item ">
                                 
-                                    <a href="tables.php">
+                                    <a href="c/tables.php">
                                         <div class="item">
                                         <img src="assets/img/website/index/table.jpg" alt="" class="bg_img" />
                                         <div class="text_wrapper">
@@ -173,7 +170,7 @@
                             <!-- Marquee-->
                             <div class="col-xs-12 col-sm-12 col-md-4  portfolio-item ">
                                 
-                                    <a href="marquees.php">
+                                    <a href="c/marquees.php">
                                         <div class="item">
                                         <img src="assets/img/website/index/marquee.jpg" alt="" class="bg_img" />
                                         <div class="text_wrapper">

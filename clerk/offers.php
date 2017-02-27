@@ -46,21 +46,21 @@
                            Enter details of the offers 
                         </div>
                         <div class="panel-body">
-                            <form method="post" action="" enctype="multipart/form-data">
+                            <form method="post" action="" >
 
                                   <div class="form-group">
                                             <label>Offer number</label>
-                                            <div class="radio">
+                                            <div class="radio" required>
                                                 <label>
-                                                    <input type="radio" name="offer" value="1">Offer 1
+                                                    <input type="radio" name="offer" value="1" required>Offer 1
                                                 </label>
-                                            </div>
-                                            <div class="radio">
+                                            
+                                           
                                                 <label>
                                                     <input type="radio" name="offer"  value="2">Offer 2
                                                 </label>
-                                            </div>
-                                            <div class="radio">
+                                            
+                                            
                                                 <label>
                                                     <input type="radio" name="offer"  value="3">Offer 3
                                                 </label>
@@ -69,11 +69,11 @@
                                         
                                   <div class="form-group">
                                             <label>Title of the offer- 1 </label>
-                                            <input class="form-control" required type="text" name="offer_title">
+                                            <input class="form-control" required type="text" name="offer_title" required>
                                   </div>
                                   <div class="form-group">
                                             <label>Description of the offer</label>
-                                            <input class="form-control" required type="text" name="offer_details">
+                                            <input class="form-control" required type="text" name="offer_details" required>
                                   </div>
                                   <button type="submit" class="btn btn-info"  name="update">Update offer </button>
                             </form>
@@ -99,6 +99,7 @@
                                             alert('Offer 1 is updated successfully!');
    
                                         </script>";
+                                        
 
 
 
@@ -131,14 +132,6 @@
 
     <?php include '../config/footer.php'; ?>
     <!-- /. FOOTER  -->
-
- 
-    <!-- BOOTSTRAP SCRIPTS -->
-    <script src="../assets/js/bootstrap.js"></script>
-
-    <!-- Navigation SCRIPTS -->
-    <script src="../assets/js/active.js" > </script>
-    
 
 </body>
 </html>

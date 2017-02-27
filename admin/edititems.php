@@ -31,6 +31,18 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-head-line">Edit Items</h1>
+                        <form action="edititems1.php" method="POST" class="form-horizontal form-label-left" novalidate>
+                              <div class="title_left">
+                                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                                  <div class="input-group">
+                                    <input id="itemID" name="itemID" type="text" class="form-control" placeholder="Item ID">
+                                    <span class="input-group-btn">
+                                      <button id="search" name="search" type="submit" class="btn btn-default" value="search">Search</button>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                          </form>
                     </div>
                 </div>
                 <!-- /. ROW  -->
@@ -41,113 +53,39 @@
                            Enter Details of the new item
                         </div>
                         <div class="panel-body">
-                            <form role="form">
-                                        
-                                 <div class="form-group">
-                                            <label>Item ID</label>
-                                            <input class="form-control" type="text">
-                                    </div>
-								<div class="form-group">
-                                            <label>Item Type</label>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">Chair
-                                                </label>
-                                            </div>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Tent
-                                                </label>
-                                            </div>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Table
-                                                </label>
-                                            </div>
-											<div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Other
-                                                </label>
-                                            </div>
-                                        </div>
-									
-								<div class="form-group">
-                                            <label>Item Name</label>
-                                            <input class="form-control" type="text">
-                                    </div>
-
-								<div class="form-group">
-                                            <label>Colors</label>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="">Red
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="">Blue
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="">Yellow
-                                                </label>
-                                            </div>
-                                  <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="">Green
-                                                </label>
-                                            </div>
-                                        </div>
-									
-								<div class="form-group">
-                                            <label>Total Amount</label>
-                                            <input class="form-control" type="number" max="11">
-                                    </div>
-								<div class="form-group">
-                                            <label>Unit Price</label>
-                                            <input class="form-control" type="number" max="11">
-                                    </div>
-									
-								<div class="form-group">
-                                            <label>Image</label> <br>
-                                            <img id="uploadPreview"  height="50%" width="50%" src="assets/img/demoUpload.jpg" >
-											<br>
-											<br>
-											<input id="uploadImage" type="file" name="myPhoto" onchange="PreviewImage();" />
-											<!-- <button id="cat" >Remove</button> -->
-											<script type="text/javascript">
-
-												function PreviewImage() {
-													var oFReader = new FileReader();
-													oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
-
-													oFReader.onload = function (oFREvent) {
-														document.getElementById("uploadPreview").src = oFREvent.target.result;
-													};
-												};
-
-											</script>
-                                    </div>
-	
-								
-										
-								<!-- <div class="form-group">
-									<label class="control-label col-lg-4">Image Upload</label>
-									<div class="">
-										<div class="fileupload fileupload-new" data-provides="fileupload">
-											<div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"></div>
-											<div>
-												<span class="btn btn-file btn-success"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file"></span>
-												<a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
-											</div>
-										</div>
-									</div>
-								</div>	 -->
-								 
-                                 <button type="submit" class="btn btn-info">UPDATE </button>
-
-                             </form>
+                            <?php
+                            include '../config/db_confg.php';
+                            $select = "SELECT * FROM stock ";
+                            $result = mysqli_query($conn, $select);
+                            if ( mysqli_num_rows($result) > 0) {
+                            // print table heads//
+                                echo ('<div class="table-responsive"><table border=1 class="table table-bordered" >
+                                    <thead style="background-color:#656565;color:#ffffff;">
+                                    <tr>
+                                        <th>Item ID</th>
+                                        <th>Item Name</th>
+                                        <th>Item Type</th>
+                                        <th>Total Stock</th>
+                                        <th>Unit Price</th>
+                                    </tr></thead>');
+                                    echo("<tbody>");
+                                    // output data from row by row
+                                    while($row = mysqli_fetch_assoc($result)) {
+                                        echo (
+                                        "<tr>
+                                            <form method=\"post\" action=\"edititems.php\">
+                                                <td> " . $row["Item_ID"]. "  </td>
+                                                <td>" . $row["Item_Name"] . "</td>
+                                                <td>" . $row["Item_Type"]." </td>
+                                                <td>" . $row["Total_Stock"]." </td>
+                                                <td>" . $row["Unit_Price"]." </td>
+                                            </form>
+                                        </tr>");
+                                    }
+                                   echo ("</tbody></table></div>");
+                        }
+                        mysqli_close($conn);
+                        ?>
                          </div>
                      </div>
                  </div>

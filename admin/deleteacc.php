@@ -1,6 +1,7 @@
 <?php
    session_start();
    include_once '../config/class.user.php';
+
    $user = new User(); 
    $uid = $_SESSION['uid'];
    if (!$user->get_session()){
@@ -36,6 +37,7 @@
                 </div>
                 <!-- /. ROW  -->
 			<div class="col-sm-3 col-md-3 pull-right">
+        <!--
             <form style="margin-top:15px;" method="post" action="searchorder.php">
                <div class="input-group">
                   <input type="text" class="form-control" placeholder="Search" name="srch" id="srch-term">
@@ -44,6 +46,7 @@
                   </div>
                </div>
             </form>
+          -->
          </div>
                 
                 <br/>
@@ -55,50 +58,36 @@
                         <div class="panel-heading">
                             Existing Accounts
                         </div>
-                        <div class="panel-body">
-                             <?php
-                        include '../config/db_confg.php';
-                        
-                            $select = "SELECT * FROM users1 ";
-                            $result = mysqli_query($conn, $select);
-                            
-                                                       
-                            if ( mysqli_num_rows($result) > 0) {
-                                            
-                            // print table heads//
-                                
-                                echo ('<div class="table-responsive"><table border=1 class="table table-bordered" >
-                                    <thead style="background-color:#656565;color:#ffffff;">
-                                    <tr>
+                        <div class="panel-body" id="ajaxreq">
+                        <?php
+                          include '../config/db_confg.php';
+                          $select = "SELECT * FROM users1 ";
+                          $result = mysqli_query($conn, $select);
 
-                                        <th>Employee Type</th>
-                                        <th>Employee ID</th>
-                                        <th>Employee Name</th>
-                                        
-                                        <th></th>
-                                        
-                                        
-                                    </tr></thead>');
-                             
-                             
+                          if ( mysqli_num_rows($result) > 0) {
+                            // print table heads//
+                                echo ('<div class="table-responsive"><table border=1 class="table table-bordered" >
+                                <thead style="background-color:#656565;color:#ffffff;">
+                                  <tr>
+                                    <th>Employee ID</th>
+                                    <th>Employee Type</th>
+                                    <th>Employee Name</th>
+                                    <th></th>
+                                  </tr>
+                                </thead>');
+
                                     echo("<tbody>");
                                     // output data from row by row
-                                    while($row = mysqli_fetch_assoc($result)) {
-                                       
-                                        echo (
+                                    while($row = mysqli_fetch_array($result)) {                                       
+                                      echo (
                                         "<tr>
-                                            <form method=\"post\" action=\"showorders.php\">
-                                                <td> Admin  </td>
-                                                <td>" . $row["uid"] . "</td>
-                                                <td>" . $row["uname"] . "</td>
-                                                
-                                                <td>
-                                                <input name=\"resid\" type=\"hidden\" id=\"resid\" value=\"".$row["uid"]."\"\>
-                                                <input class=\"delete1\" name=\"show\" type=\"submit\" id=\"show\" value=\"Delete Account\">
-                                                </td>
-                                                                                    
-                                              
-                                            </form>
+                                            <td>" . $row[0] . "</td>
+                                            <td>" . $row[1] . "</td>
+                                            <td>" . $row[4]. "</td>
+                                            <td>
+                                              <a href='#' id='$row[0]' class='deleteuser'><button value=''>delete</button></a>
+                                            </td>
+                                         
                                         </tr>");
                                         
                                     }
@@ -132,3 +121,67 @@
 
 </body>
 </html>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('a.deleteuser').click(function(e){
+      e.preventDefault();
+    })
+
+
+    $('a.deleteuser').click(function(){
+     var userid = this.id;
+
+     swal({
+      title: 'Confirm deletion of account?',
+      text: "Account will be deleted permanently!",
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!',
+      cancelButtonText: 'No, cancel!',
+      confirmButtonClass: 'btn btn-success',
+      cancelButtonClass: 'btn btn-danger',
+      buttonsStyling: false
+}).then(function () {
+
+       $.ajax({
+        type:"get",
+        url:"deleteF.php?id="+userid,
+        success:function(data){
+
+           swal(
+              'Deleted!',
+              'Your file has been deleted.',
+              'success'
+            )
+
+           $('div#ajaxreq').html("");
+           $('div#ajaxreq').html(data);
+          
+        }
+
+      })
+ 
+}, function (dismiss) {
+ 
+  if (dismiss === 'cancel') {
+    swal(
+      'Cancelled',
+      'Your imaginary file is safe :)',
+      'error'
+    )
+  }
+})
+
+ 
+
+      
+
+    })
+  })
+
+
+</script>
+header("Location:viewacc.php");

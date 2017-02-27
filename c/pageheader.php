@@ -2,14 +2,14 @@
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <!-- Bootstrap Core CSS -->
-        <link rel="stylesheet" href="../assets/css/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/css/bootstrap.css" >
         
         <!-- CSS Stylesheets-->
-        <link rel="stylesheet" href="../assets/css/web/animate.css" rel="stylesheet">
-        <link rel="stylesheet" href="../assets/css/font-awesome.css" rel="stylesheet">
-        <link rel="stylesheet" href="../assets/css/web/lassana.css" rel="stylesheet">
-        <link rel="stylesheet" href="../assets/css/web/responsive.css" rel="stylesheet">
-        <link rel="stylesheet" href="../assets/css/web/imgres.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../assets/css/web/animate.css" >
+        <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/web/lassana.css" >
+        <!--<link rel="stylesheet" href="../assets/css/web/responsive.css" rel="stylesheet">-->
+        <link rel="stylesheet" type="text/css" href="../assets/css/web/imgres.css" >
 
         
 
@@ -62,10 +62,6 @@
                                     
                                 </li>
                                 
-                                 <li>
-                                     <a href="more.php">More services</a>
-                                </li>
-                                
                                 <li>
                                     <a href="gallery.php">Gallery</a>
                                 </li>
@@ -85,7 +81,7 @@
                                             $Total += 1;
                                         }//end if
                                     }
-                                    echo " "." <b>".$Total."</b> ";
+                                    echo " "." <p id=\"n_items\"><b>".$Total."</b></p> ";
                                     ?>
                                      </span> Items</a>
                                     

@@ -55,7 +55,7 @@
 
                             $id = $_POST["resid"];
                         
-                            $select = "SELECT * FROM orders WHERE order_id='$id' ";
+                            $select = "SELECT * FROM temp_res WHERE ResID=$id ";
                             $result = mysqli_query($conn, $select);
                             
                                                        
@@ -65,40 +65,51 @@
 
                                 
                              ?>
-
-                            <p><b>Order_ID:</b>
+							 
+<p><b>Order_ID:</b>
 <div class="fg">
-<div class="alert alert-info" style="font-size:16"><?php echo $row['order_id']; ?></div>
+<div class="alert alert-info" style="font-size:16"><?php echo $row['ResID']; ?></div>
 </p> 
 <p><b>Name: </b> 
 <div class="fg">
-<div class="alert alert-info" style="font-size:16"> <?php echo $row['cname']; ?></div>
+<div class="alert alert-info" style="font-size:16"> <?php echo $row['CusName']; ?></div>
+</p> 
+<p><b>E-mail: </b> 
+<div class="fg">
+<div class="alert alert-info" style="font-size:16"> <?php echo $row['Email']; ?></div>
 </p> 
 <p><b>Phone Number:  </b>
 <div class="fg">
-<div class="alert alert-info" style="font-size:16">  <?php echo $row['cnumber']; ?></div>
-</p> 
-<p><b>Items:  </b>
-<div class="fg">
-<div  class="alert alert-info"tyle="font-size:16">   <?php echo $row['items']; ?></div>
-</p> 
+<div class="alert alert-info" style="font-size:16">  <?php echo $row['ConNum']; ?></div>
+</p>
 <p><b>Date: </b> 
 <div class="fg">
-<div class="alert alert-info" style="font-size:16">   <?php echo $row['date']; ?></div>
-</p> 
-<p><b>Time: </b> 
-<div class="fg">
-<div class="alert alert-info" style="font-size:16">   <?php echo $row['time']; ?></div>
-</p> 
-<p><b>City: </b> 
-
-   <div class="alert alert-info" style="font-size:16">   <?php echo $row['city']; ?></div>
+<div class="alert alert-info" style="font-size:16">   <?php echo $row['ResDate']; ?></div>
+</p>
+<p><b>Duration: </b> 
+   <div class="alert alert-info" style="font-size:16">   <?php echo $row['Duration']; ?></div>
    </p> 
-   <p><b>Address: </b> 
+<p><b>City: </b> 
+   <div class="alert alert-info" style="font-size:16">   <?php echo $row['District']; ?></div>
+   </p> 
+   
+<p><b>Address: </b> 
    <div class="fg">
-      <div class="alert alert-info" style="font-size:16">   <?php echo $row['address']; ?></div>
+      <div class="alert alert-info" style="font-size:16">   <?php echo $row['Location']; ?></div>
       </p> 
    </div>
+<p><b>Total Cost: </b> 
+   <div class="alert alert-info" style="font-size:16">   <?php echo $row['TotalCost']; ?></div>
+   </p>
+<p><b>Labour Charge: </b> 
+   <div class="alert alert-info" style="font-size:16">   <?php echo $row['Labour_Charge']; ?></div>
+   </p> 
+<p><b>Delivery Charge: </b> 
+   <div class="alert alert-info" style="font-size:16">   <?php echo $row['Delivery_Charge']; ?></div>
+   </p> 
+<p><b>Advance Fee: </b> 
+   <div class="alert alert-info" style="font-size:16">   <?php echo $row['Advance_Fee']; ?></div>
+   </p> 
 </div>
 </div>
 </div>

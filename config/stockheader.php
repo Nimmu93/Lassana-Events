@@ -37,6 +37,7 @@
                         ?>
                         
                         <div class="user-img-div">
+                            
                             <img class="photo" src="<?php echo $row['location']; ?>" >
                             <?php } ?>
                             <br><br>
@@ -58,11 +59,7 @@
                          
                     </li>
                     <li>
-                        <a href="inbox.php"><i class="fa fa-inbox "></i>Inbox</a>
-                         
-                    </li>  
-                    <li>
-                        <a href='../login.php?q=logout'><i class="fa fa-flash "></i>Logout</a>
+                        <a href='../config/login.php'><i class="fa fa-flash "></i>Logout</a>
                     </li>
                 </ul>
 

@@ -1,5 +1,6 @@
 <?php
 	include ('connection.php');
+	include ('../admin/backupcreated.php');
 	// Get table data
 	// -> start
 	$tables = array();
@@ -37,10 +38,13 @@
 			$result .="\n\n";
 		}
 
-		echo "Backup File Created";
+		//echo "Backup File Created";
+
+
+
 		// -> end
 		//Create Folder and save backup file in different location
-		$folder = 'Backup-';
+		$folder = 'backup/Backup-';
 		$date = date('m-d-Y'); 
 		$filename = $folder."db_backup_".$date; 
 		$handle = fopen($filename.'.sql','w+');
